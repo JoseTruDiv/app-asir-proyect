@@ -16,7 +16,11 @@
     <script src="./app/js/rules/formReg.js"></script>
 </head>
 <body class="fondo">
-    <?php include $rutas[$_SERVER['REQUEST_URI']];?>
+    <?php
+        if (isset($rutas[$_SERVER['REQUEST_URI']])) {
+            include $rutas[$_SERVER['REQUEST_URI']];
+        }
+     ?>
     <?php include $path->FOOTER; ?>
 </body>
 </html>

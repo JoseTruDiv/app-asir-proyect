@@ -20,3 +20,11 @@
             </form>
         </div>
     </div>
+
+    <?php
+        session_start();
+        if (isset($_SESSION['registroUser'])) {
+            include $path->COMPONENTS.'/alerts/altaAlert.php'; 
+            session_destroy();
+        }
+     ?>

@@ -8,10 +8,11 @@
                     <p class="text">Regístrate</p>
                 </div>
                 <div class="row justify-center mt-1">
-                    <input class="input text" type="text" name="emailReg" id="emailReg" placeholder="Email o correo electrónico..." required>
+                    <input class="input text" type="email" name="emailReg" id="emailReg" placeholder="Email o correo electrónico..." required>
                 </div>
                 <div class="row justify-center mt-1">
-                    <input class="input text" type="password" name="passReg" id="passReg" placeholder="Contraseña..." required>
+                    <input class="input text" type="password" name="passReg" id="passReg" placeholder="Contraseña..." required pattern="(?=.*d)(?=.*[A-Z]).{8,}"
+                    title="La contraseña debe tener al menos 8 caracteres, incluyendo una mayúscula, una minúscula, un número y un símbolo (@$!%*?&)">
                 </div>
                 <div class="row justify-center mt-1">
                     <input class="input text" type="password" id="passReg2" placeholder="Repite la contraseña..." required>

@@ -1,8 +1,9 @@
 <?php
+require_once __DIR__.'/../routes/path.php';
+$path = new Path();
+require_once $path->MODELS.'/registroAdminModels.php';
 
-require_once '../models/registroAdminModels.php';
-
-class RegistroController{
+class RegistroAdminController{
 
     function index(){
 
@@ -14,7 +15,7 @@ class RegistroController{
 
         $email = $_POST['emailReg'];
 
-        $passwd = $_POST['passReg'];
+        $passwd = password_hash($_POST['passReg'],PASSWORD_DEFAULT);
 
         $departamento = '';
 

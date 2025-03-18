@@ -12,6 +12,8 @@ class Path{
     public $IMG;
     public $FOOTER;
     public $CONTROLLERS;
+    public $MODELS;
+    public $DB;
 
     public function __construct() {
       $this->SRC = realpath(__DIR__ . '/..');
@@ -25,6 +27,8 @@ class Path{
       $this->IMG = realpath(__DIR__.'/../../app/imgs');
       $this->FOOTER = realpath(__DIR__.'/../../app/components/footer.php');
       $this->CONTROLLERS = realpath(__DIR__ . '/../controllers/');
+      $this->MODELS = realpath(__DIR__ . '/../models/');
+      $this->DB = realpath(__DIR__ . '/../db/');
   }
 
 }
