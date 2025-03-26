@@ -34,3 +34,7 @@ class Path{
   }
 
 }
+
+$path = new Path();
+
+$GLOBALS['path'] = $path;

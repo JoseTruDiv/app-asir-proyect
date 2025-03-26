@@ -1,6 +1,6 @@
 
-<div class="container-auth">
-        <div class="box-auth">
+<div class="container align-center justify-center">
+        <div class="box-auth box-passLogin-animate">
             <form action="/loginController" method="post">
                 <div class="row justify-center">
                     <img class="logo-auth" src="./app/imgs/logo-corporativo.svg" alt="">

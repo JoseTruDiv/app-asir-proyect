@@ -1,6 +1,5 @@
 <?php
-require_once __DIR__.'/../routes/path.php';
-$path = new Path();
+$path = $GLOBALS['path'];
 require_once $path->MODELS.'/UsuariosModels.php';
 
 class GetCuentaController{

@@ -1,7 +1,5 @@
 <?php
-
-require_once __DIR__.'/path.php';
-$path = new Path();
+$path = $GLOBALS['path'];
 require_once $path->CONTROLLERS.'/RegistroAdminController.php';
 require_once $path->CONTROLLERS.'/LoginController.php';
 $RegistroAdminController = new RegistroAdminController();

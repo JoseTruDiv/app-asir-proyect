@@ -685,8 +685,18 @@ body {
   height: 70vh;
 }
 
+.container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+}
+
 li {
   list-style: none;
+}
+
+.d-grid {
+  display: grid;
 }
 
 .d-none {
@@ -735,6 +745,26 @@ li {
   text-align: center;
 }
 
+.grid-6-5 {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.grid-3-5 {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.grid-2-5 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.grid-1-10 {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
 .w-10 {
   width: 10%;
 }
@@ -773,6 +803,50 @@ li {
 
 .w-100 {
   width: 100%;
+}
+
+.h-10 {
+  height: 10vh;
+}
+
+.h-20 {
+  height: 20vh;
+}
+
+.h-30 {
+  height: 30vh;
+}
+
+.h-40 {
+  height: 40vh;
+}
+
+.h-50 {
+  height: 50vh;
+}
+
+.h-60 {
+  height: 60vh;
+}
+
+.h-70 {
+  height: 70vh;
+}
+
+.h-80 {
+  height: 80vh;
+}
+
+.h-90 {
+  height: 90vh;
+}
+
+.h-100 {
+  height: 100vh;
+}
+
+.h-auto {
+  height: auto;
 }
 
 .col-10 {
@@ -861,15 +935,31 @@ h3 {
 }
 
 /***************************************HOME***************************************************/
-/***************************************AUTH***************************************************/
-.container-auth {
-  width: 100%;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.nav-home {
+  color: #5A595B;
 }
 
+.nav-home:hover {
+  color: #5FC4E6;
+}
+
+.box-home-app {
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.box-home-app:hover {
+  background-color: #f1f1f1;
+}
+
+/***************************************AUTH***************************************************/
 .box-auth {
   background-color: #fff;
   height: auto;
@@ -930,6 +1020,18 @@ h3 {
   }
   100% {
     transform: translateX(0px);
+  }
+}
+.box-passLogin-animate {
+  animation: ease 0.7s boxPassLogin-animate;
+}
+
+@keyframes boxPassLogin-animate {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 /***************************************INICIO***************************************************/

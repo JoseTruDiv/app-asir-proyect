@@ -243,10 +243,21 @@ body{
     height: 70vh;
 }
 
+
+.container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+}
+
+
 li{
     list-style: none;
 }
 
+.d-grid{
+    display: grid;
+}
 
 .d-none{
     display: none;
@@ -295,10 +306,41 @@ li{
     text-align: center;
 }
 
+.grid-6-5{
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.grid-3-5{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.grid-2-5{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.grid-1-10{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
 @for $i from 1 through 10 {
     .w-#{$i * 10} {
         width: $i * 10%; // Establece el ancho de cada columna en porcentaje
     }
+}
+
+
+@for $i from 1 through 10 {
+    .h-#{$i * 10} {
+        height: $i * 10vh; // Establece el ancho de cada columna en porcentaje
+    }
+}
+
+.h-auto{
+    height: auto;
 }
 
 
@@ -373,21 +415,36 @@ h3{
 
 
 
+
+
 /***************************************HOME***************************************************/
 
+.nav-home{
+    color: $color-terciario;
+}
 
+.nav-home:hover{
+   color: $color-secundario;
+}
 
+.box-home-app{
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.box-home-app:hover{
+    background-color: #f1f1f1;
+}
 
 
 /***************************************AUTH***************************************************/
-
-.container-auth{
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
 .box-auth{
@@ -456,8 +513,18 @@ h3{
     }
 }
 
+.box-passLogin-animate{
+    animation: ease 0.7s boxPassLogin-animate;
+}
 
-
+@keyframes boxPassLogin-animate {
+    0%{
+        transform: translateY(-1000px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
 
 
 /***************************************INICIO***************************************************/

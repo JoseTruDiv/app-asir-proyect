@@ -1,4 +1,4 @@
-<div class="container-auth">
+<div class="container align-center justify-center">
     <div class="box-auth">
     <form id="formReg" action="/registroAdminController" method="post">
                 <div class="row justify-center">
