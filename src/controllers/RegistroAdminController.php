@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__.'/../routes/path.php';
 $path = new Path();
-require_once $path->MODELS.'/registroAdminModels.php';
+require_once $path->MODELS.'/UsuariosModels.php';
 
 class RegistroAdminController{
 
@@ -23,7 +23,7 @@ class RegistroAdminController{
 
         $registro = ['id' => $id, 'nombre' => $name, 'apellido' => $apellido,'email' => $email, 'departamento' => $departamento, 'password' => $passwd, 'idRol' => $idRol];
 
-        $MODEL = new RegistroAdminModels();
+        $MODEL = new UsuariosModels();
 
         $MODEL->addUser($registro);
     }

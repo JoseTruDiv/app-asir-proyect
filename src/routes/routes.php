@@ -3,13 +3,18 @@
 require_once __DIR__.'/path.php';
 $path = new Path();
 require_once $path->CONTROLLERS.'/RegistroAdminController.php';
+require_once $path->CONTROLLERS.'/LoginController.php';
 $RegistroAdminController = new RegistroAdminController();
+$LoginController = new LoginController();
 
 $rutas = [
     "/" => $path->LOGIN,
     "/registro" => $path->REGISTRO,
+    "/loginpass" => $path->LOGINPASS,
+    "/home" => $path->HOME,
     'POST' => [
         "/registroAdminController" => [$RegistroAdminController, 'index'],
+        "/loginController" => [$LoginController, 'index'],
     ],
 ];
 
