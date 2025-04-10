@@ -15,6 +15,9 @@ class Path{
     public $MODELS;
     public $DB;
     public $LOGINPASS;
+    public $DATA;
+    public $CONTACTS;
+    public $PROYECTS;
 
     public function __construct() {
       $this->SRC = realpath(__DIR__ . '/..');
@@ -31,6 +34,9 @@ class Path{
       $this->CONTROLLERS = realpath(__DIR__ . '/../controllers/');
       $this->MODELS = realpath(__DIR__ . '/../models/');
       $this->DB = realpath(__DIR__ . '/../db/');
+      $this->DATA = realpath(__DIR__ . '/../../app/data');
+      $this->CONTACTS = realpath(__DIR__.'/../../app/components/pages/Contactos.php');
+      $this->PROYECTS = realpath(__DIR__.'/../../app/components/pages/Proyectos.php');
   }
 
 }

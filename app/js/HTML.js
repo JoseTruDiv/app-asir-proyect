@@ -8,5 +8,9 @@ const HTML = {
     dropdownUser: document.getElementById('dropdown-user'),
     slidebarHome: document.getElementById('slidebar-home'),
     navHome: document.getElementById('nav-home'),
-    closedSlidebar: document.getElementById('closed-slidebar')
+    closedSlidebar: document.getElementById('closed-slidebar'),
+    sshServer: document.getElementById('ssh-server'),
+    sshCliente: document.getElementById('ssh-cliente'),
+    sshClipServer: document.getElementById('copy-ssh-server'),
+    sshClipCliente: document.getElementById('copy-ssh-cliente')
 }

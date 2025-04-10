@@ -1087,6 +1087,33 @@ h3 {
     opacity: 0;
   }
 }
+.div-alert-ssh {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(97, 97, 97, 0.6039215686);
+}
+
+.alert-ssh {
+  background-color: #fff;
+  width: 400px;
+  max-width: 100%;
+  height: 30vh;
+}
+
+.clickboard-ssh > input {
+  padding: 0.5rem;
+  border-radius: 0px;
+  width: 80%;
+}
+
+.clickboard-ssh > button {
+  padding: 0.5rem;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
 /***************************************AUTH***************************************************/
 .box-auth {
   background-color: #fff;

@@ -1,15 +1,27 @@
 <?php
 
-$APPS = [
-    'CONTACTOS' => './app/imgs/apps/app_contact.svg',
-    'PROYECTOS' => './app/imgs/apps/app_proyects.svg',
-    'SITIOS WEB' => './app/imgs/apps/app_web.svg',
-    'NOTAS' => './app/imgs/apps/app_notes.svg',
-    'CLOUD' => './app/imgs/apps/app_cloud.svg',
-    'FTP SERVER' => './app/imgs/apps/app_ftp.svg',
-    'PORTAINER' => './app/imgs/apps/app_portainer.svg',
-    'CORREO' => './app/imgs/apps/app_email.svg',
-    'SSH' => './app/imgs/apps/app_ssh.svg',
-    'NOMINAS' => './app/imgs/apps/app_payment.svg',
-    'CALENDARIO' => './app/imgs/apps/app_calendar.svg',
-];
+    $path = $GLOBALS['path'];
+
+    require_once $path->DATA.'/Childs-Apps/Contactos.php';
+    require_once $path->DATA.'/Childs-Apps/Proyectos.php';
+    require_once $path->DATA.'/Childs-Apps/Notas.php';
+    require_once $path->DATA.'/Childs-Apps/Sitios_webs.php';
+    require_once $path->DATA.'/Childs-Apps/SSH.php';
+    require_once $path->DATA.'/Childs-Apps/Calendario.php';
+    require_once $path->DATA.'/Childs-Apps/Cloud.php';
+    require_once $path->DATA.'/Childs-Apps/Ftp.php';
+    require_once $path->DATA.'/Childs-Apps/Correo.php';
+    require_once $path->DATA.'/Childs-Apps/Portainer.php';
+
+    class Apps{
+
+        public $Administrador;
+        public $Usuario;
+        public $Desarrollador;
+
+
+        function __construct()
+        {   
+            $this->Administrador=[new Contactos(),new Proyectos(),new Sitio_web(),new Notas(),new Cloud(),new Ftp(),new Portainer(),new Correo(),new SSH(),new Calendario()];
+        }
+    }

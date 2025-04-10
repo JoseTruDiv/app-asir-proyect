@@ -51,7 +51,9 @@ window.addEventListener('load',()=>{
             HTML.slidebarHome.classList.remove('slidebar-home');
         })
 
-
+        HTML.sshClipServer.addEventListener('click',()=>{
+            console.log(this.innerWidth);
+        })
      
      /****************************************************************************************************HOME*******************/
 
