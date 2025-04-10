@@ -6,13 +6,13 @@ class LoginController{
 
     function index(){
         $loginController = new LoginController();
-        $function = $_POST['funcion'];
+        $function = htmlspecialchars($_POST['funcion']);
         if ($function == 'setUser') {
-            $name = $_POST['nameLogin'];
+            $name = htmlspecialchars($_POST['nameLogin']);
             $loginController->setUser($name);
         }elseif($function == 'authUser'){
             session_start();
-            $password = $_POST['passLogin'];
+            $password = htmlspecialchars($_POST['passLogin']);
             $name = $_SESSION['nameLogin'];
             unset($_SESSION['nameLogin']);
             $loginController->authUser($name,$password);

@@ -1,8 +1,15 @@
 <?php
-    require __DIR__.'/src/routes/path.php';
-    require __DIR__.'/src/routes/routes.php';
-    $path = new Path();
+
+session_start();
+
+require __DIR__.'/src/routes/path.php';
+require __DIR__.'/src/routes/routes.php';
+require __DIR__.'/app/data/Apps.php';
+
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +28,6 @@
             include $rutas[$_SERVER['REQUEST_URI']];
         }
      ?>
-    <?php include $path->FOOTER; ?>
+    <?php include $GLOBALS['path']->FOOTER; ?>
 </body>
 </html>

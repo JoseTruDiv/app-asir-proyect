@@ -1,5 +1,20 @@
 <?php
-$path = $GLOBALS['path'];
+
+
+require_once __DIR__.'/path.php';
+
+
+
+/**********************************************************************************************************************VARIABLES-GLOBALES***************************************************************************************** */
+
+$path = new Path();
+
+$GLOBALS['path'] = $path;
+
+
+
+
+
 require_once $path->CONTROLLERS.'/RegistroAdminController.php';
 require_once $path->CONTROLLERS.'/LoginController.php';
 $RegistroAdminController = new RegistroAdminController();

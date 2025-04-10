@@ -51,6 +51,14 @@ class UsuariosModels{
             $passQuery = db()->query("SELECT password FROM usuarios WHERE id=$idUser")->fetch_array(MYSQLI_NUM)[0];
 
             if (password_verify($pass,$passQuery)) {
+                $arrayUser = db()->query("SELECT nombre, email FROM usuarios WHERE id = $idUser");
+                
+                $usuario = $arrayUser->fetch_assoc();
+
+                $_SESSION['nameUser'] = $usuario['nombre'];
+
+                $_SESSION['emailUser'] = $usuario['email'];
+                
                 return 1;
             }else{
                 return 0;

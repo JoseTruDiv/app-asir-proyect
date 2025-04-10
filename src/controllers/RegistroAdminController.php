@@ -12,7 +12,9 @@ class RegistroAdminController{
 
         $apellido = '';
 
-        $email = $_POST['emailReg'];
+
+
+        $email = htmlspecialchars($_POST['emailReg']);
 
         $passwd = password_hash($_POST['passReg'],PASSWORD_DEFAULT);
 

@@ -27,14 +27,10 @@ class Path{
       $this->LOGINPASS = realpath(__DIR__.'/../../app/components/auth/loginPasswd.php');
       $this->REGISTRO = realpath(__DIR__ . '/../../app/components/auth/registro.php');
       $this->IMG = realpath(__DIR__.'/../../app/imgs');
-      $this->FOOTER = realpath(__DIR__.'/../../app/components/footer.php');
+      $this->FOOTER = realpath(__DIR__.'/../../app/components/pages/footer.php');
       $this->CONTROLLERS = realpath(__DIR__ . '/../controllers/');
       $this->MODELS = realpath(__DIR__ . '/../models/');
       $this->DB = realpath(__DIR__ . '/../db/');
   }
 
 }
-
-$path = new Path();
-
-$GLOBALS['path'] = $path;
