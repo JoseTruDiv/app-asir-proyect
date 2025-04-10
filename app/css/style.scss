@@ -246,7 +246,7 @@ body{
 
 .container{
     width: 100%;
-    height: 90vh;
+    height: 88%;
     display: flex;
 }
 
@@ -324,6 +324,11 @@ li{
 .grid-1-10{
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(10, 1fr);
+}
+
+.grid-1-3{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
 @for $i from 1 through 10 {
@@ -442,6 +447,140 @@ h3{
 .box-home-app:hover{
     background-color: #f1f1f1;
 }
+
+.dropdown-user{
+    background-color: $color-enfasis;
+    position: absolute;
+    top: 8%;
+    right: 2%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
+.tittle-navbar-user{
+    font-family: get-map($font-text, 'family');
+    font-size: 1.3rem;
+}
+
+.dropdown-user>div>div{
+    padding: 0rem 3rem;
+    padding-left: 1rem;
+}
+
+.box-closed-session{
+    background-color: #e4e4e4;
+    padding: 1rem 2rem;
+}
+
+.a-session{
+    color: #000;
+    font-family: get-map($font-text, 'family');
+    text-decoration: none;
+}
+
+.a-session:hover{
+    color: #5A595B;
+}
+
+.animation-height-into{
+    animation: ease-out 0.6s animation-height-reverse;
+    transform: scaleY(1);    
+    transform-origin: top center;
+    opacity: 0;
+}
+
+.animation-height-off{
+    opacity: 0 !important;
+}
+
+.animation-height{
+    animation: ease-out 0.6s animation-height;
+    transform: scaleY(1);    
+    transform-origin: top center;
+    opacity: 1;
+}
+
+@keyframes animation-height {
+    0%{
+        transform: scaleY(0); 
+        opacity: 0;
+    }
+
+    100%{
+        transform: scaleY(1); 
+        opacity: 1;
+    }
+}
+
+
+@keyframes animation-height-reverse {
+    0%{
+        transform: scaleY(1); 
+        opacity: 1;
+    }
+
+    100%{
+        transform: scaleY(0); 
+        opacity: 0;
+    }
+}
+
+
+.slidebar-home{
+    width: 100%;
+    max-width: 340px;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    animation: ease-out 1s animation-sidebar;
+}
+
+.slidebar-off{
+    width: 0vw;
+    opacity: 0;
+}
+
+.slidebar-reverse{
+    width: 0vw;
+    opacity: 0;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #fff;
+    animation: ease-in 1s animation-sidebar-reverse;
+}
+
+.closed-slidebar{
+    color: #000;
+}
+
+.closed-slidebar:hover{
+    color: #5A595B;
+}
+
+@keyframes animation-sidebar {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 340px;
+    }
+}   
+
+@keyframes animation-sidebar-reverse {
+    0%{
+        width: 340px;
+    }
+    100%{
+        width: 0px;
+        opacity: 0;
+    }
+}  
+
+
 
 
 /***************************************AUTH***************************************************/

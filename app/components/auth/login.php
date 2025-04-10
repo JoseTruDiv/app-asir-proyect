@@ -3,7 +3,7 @@
         <div class="box-auth" id="boxAuth">
             <form action="/loginController" method="post">
                 <div class="row justify-center">
-                    <img class="logo-auth" src="./app/imgs/logo-corporativo.svg" alt="">
+                    <img class="logo-auth" src="./app/imgs/logo-corporativo.svg" alt="logo_financial">
                 </div>
                 <input type="hidden" name="funcion" value="setUser">
                 <div class="row justify-center mt-1">
@@ -45,14 +45,13 @@
     </div>
 
     <?php
-        session_start();
         if (isset($_SESSION['registroUser'])) {
-            include $path->COMPONENTS.'/alerts/altaAlert.php'; 
+            include $path->COMPONENTS.'/widgets/alerts/altaAlert.php'; 
             unset($_SESSION['registroUser']);
         }
 
         if (isset($_SESSION['inicio'])) {
-            include $path->COMPONENTS.'/alerts/errorLogin.php'; 
+            include $path->COMPONENTS.'/widgets/alerts/errorLogin.php'; 
             unset($_SESSION['inicio']);
         }
      ?>

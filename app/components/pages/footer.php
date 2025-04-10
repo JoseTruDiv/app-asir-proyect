@@ -1,4 +1,4 @@
-<footer>
+<footer style="height: 10%;">
     <div class="row justify-end p-2 g-1 align-center">
         <a href="#" class="a-footer">Términos de uso</a> 
         <a href="#" class="a-footer">Política de privacidad</a> 

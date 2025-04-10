@@ -1,10 +1,8 @@
 <div class="container" style="flex-direction: column;">
 
-
-
     <div class="row h-10 justify-between">
         <div class="d-flex g-1 align-center p-2">
-            <a class="nav-home" href="#">
+            <a id="nav-home" class="nav-home" href="#">
                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_2003_116)">
                 <path d="M4.78125 0C7.42422 0 9.5625 2.13828 9.5625 4.78125C9.5625 7.42422 7.42422 9.5625 4.78125 9.5625C2.13828 9.5625 0 7.42422 0 4.78125C0 2.13828 2.13828 0 4.78125 0Z" fill="currentColor"/>
@@ -26,6 +24,14 @@
             </a>
             <p class="text">MÁS OPCIONES</p>
         </div>
+
+        <?php 
+            
+            $path = $GLOBALS['path'];
+
+            include  $path->COMPONENTS.'/widgets/slidebars/Navbar_Home.php';
+        
+        ?>
 
 
 
@@ -61,7 +67,7 @@
                 </svg>
             </a>
 
-            <a class="nav-home" href="#">
+            <a id="nav-user" class="nav-home" href="#">
                 <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_2004_136)">
                 <path d="M29 14.5C29.0024 16.4292 28.6186 18.3394 27.8712 20.118C27.1238 21.8965 26.028 23.5075 24.6484 24.856C24.6316 24.8724 24.6145 24.8892 24.5975 24.9053C24.3775 25.1192 24.1505 25.3261 23.9163 25.5261C21.2927 27.7711 17.9531 29.0049 14.5 29.0049C11.0469 29.0049 7.70737 27.7711 5.08367 25.5261C4.84978 25.3263 4.62263 25.1194 4.40223 24.9053C4.38516 24.8892 4.36809 24.8737 4.35165 24.856C2.97192 23.5076 1.87608 21.8966 1.12871 20.118C0.381336 18.3394 -0.00243472 16.4292 1.16223e-05 14.5C1.16223e-05 6.49175 6.49176 0 14.5 0C22.5083 0 29 6.49175 29 14.5Z" fill="#E0E0E0"/>
@@ -74,6 +80,14 @@
                 </defs>
                 </svg>
             </a>
+            
+            <?php 
+
+                $path = $GLOBALS['path'];
+
+                include  $path->COMPONENTS.'/widgets/dropdowns/NavBar_User.php';
+            ?>
+
         </div>
 
 
@@ -86,20 +100,6 @@
 
                 $path = $GLOBALS['path'];
 
-                $APPS = [
-                    'CHATS' => './app/imgs/apps/app-chat.svg',
-                    'CONTACTOS' => './app/imgs/apps/app_contact.svg',
-                    'PROYECTOS' => './app/imgs/apps/app_proyects.svg',
-                    'SITIOS WEB' => './app/imgs/apps/app_web.svg',
-                    'NOTAS' => './app/imgs/apps/app_notes.svg',
-                    'CLOUD' => './app/imgs/apps/app_cloud.svg',
-                    'FTP SERVER' => './app/imgs/apps/app_ftp.svg',
-                    'PORTAINER' => './app/imgs/apps/app_portainer.svg',
-                    'CORREO' => './app/imgs/apps/app_email.svg',
-                    'SSH' => './app/imgs/apps/app_ssh.svg',
-                    'NOMINAS' => './app/imgs/apps/app_payment.svg',
-                    'CALENDARIO' => './app/imgs/apps/app_calendar.svg',
-                ];
                 foreach ($APPS as $key => $value) {
             ?>
                 <a style="text-decoration: none;" href="#"><div class="box-home-app g-1"><img height="50" src="<?php echo $value; ?>" alt=""><span class="text"><?php echo $key ?></span></div></a>
