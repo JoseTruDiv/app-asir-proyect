@@ -1,6 +1,6 @@
-<div class="container" style="flex-direction: column;">
+<div class="container d-none-mobile" style="flex-direction: column;">
 
-    <div class="row h-10 justify-between">
+    <div class="d-flex h-10 justify-between">
         <div class="d-flex g-1 align-center p-2">
             <a id="nav-home" class="nav-home" href="#">
                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,37 +93,40 @@
 
     </div>
 
-    <div class="row-column px-10 pt-6 g-2">
-        <h2>APPS</h2>
-        <div class="d-grid grid-6-5 g-3 h-30">
-            <?php
+    <div class="row-column align-center">
+        <div class="row-column g-2 div-grid-apps">
+            <h2>APPS</h2>
+            <div class="d-grid grid-5-5 g-3 h-30 grid-3-5-md grid-3-5-lg">
+                <?php
 
-                $idRol = $_SESSION['idRol'];
+                    $idRol = $_SESSION['idRol'];
 
-                $path = $GLOBALS['path'];
+                    $path = $GLOBALS['path'];
 
-                require_once $path->CONTROLLERS.'/GetAppsController.php';
+                    require_once $path->CONTROLLERS.'/GetAppsController.php';
 
-                $AppsController = new GetAppsController();
+                    $AppsController = new GetAppsController();
 
-                $array_apps = $AppsController->getApps($idRol);
+                    $array_apps = $AppsController->getApps($idRol);
 
-                foreach ($array_apps as $value) {
-              
-            ?>
-              <a id="<?php echo $value->name;  ?>" style="text-decoration: none;" href="<?php echo $value->url ?>"><div class="box-home-app g-1"><img height="50" src="<?php echo $value->img; ?>" alt=""><span class="text"><?php echo $value->name ?></span></div></a>
+                    foreach ($array_apps as $value) {
+                
+                ?>
+                <a id="<?php echo $value->name;  ?>" style="text-decoration: none;" href="<?php echo $value->url ?>"><div class="box-home-app g-1"><img height="50" src="<?php echo $value->img; ?>" alt=""><span class="text"><?php echo $value->name ?></span></div></a>
 
-            <?php
+                <?php
 
+                                        
+                    }
                                     
-                }
-                                
 
-            ?>
+                ?>
+            </div>
         </div>
     </div>
+    
 
-
+    
 
 
 
@@ -168,3 +171,8 @@
         
     </div>
 </div>
+
+
+<?php
+    include $GLOBALS['path']->HOMEMOBILE;
+?>

@@ -18,6 +18,7 @@ class Path{
     public $DATA;
     public $CONTACTS;
     public $PROYECTS;
+    public $HOMEMOBILE;
 
     public function __construct() {
       $this->SRC = realpath(__DIR__ . '/..');
@@ -37,6 +38,7 @@ class Path{
       $this->DATA = realpath(__DIR__ . '/../../app/data');
       $this->CONTACTS = realpath(__DIR__.'/../../app/components/pages/Contactos.php');
       $this->PROYECTS = realpath(__DIR__.'/../../app/components/pages/Proyectos.php');
+      $this->HOMEMOBILE = realpath(__DIR__.'/../../app/components/pages/HomeMobile.php');
   }
 
 }

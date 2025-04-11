@@ -1,5 +1,5 @@
-<footer style="height: 10%;">
-    <div class="row justify-end p-2 g-1 align-center">
+<footer class="footer-xxl" style="height: 10%;">
+    <div class="d-flex justify-end p-2 g-1 align-center justify-center-tablet">
         <a href="#" class="a-footer">Términos de uso</a> 
         <a href="#" class="a-footer">Política de privacidad</a> 
         <a href="#" class="a-footer d-flex align-center">

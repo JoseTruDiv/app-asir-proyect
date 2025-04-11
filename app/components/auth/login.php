@@ -14,8 +14,9 @@
                 </div>
                 <?php 
 
-                    require_once __DIR__.'../../../../src/routes/path.php';
-                    $path = new Path();
+                
+
+                    $path = $GLOBALS['path'];
 
                     require_once $path->CONTROLLERS.'/GetCuentaController.php';
 

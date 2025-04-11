@@ -666,16 +666,7 @@ body {
   background-size: cover;
   background-position: center;
   height: 100vh;
-}
-
-.header {
-  background-color: #1784C7;
-  padding: 2rem 3rem;
-}
-
-.footer {
-  background-color: #1784C7;
-  padding: 2rem 3rem;
+  background-repeat: no-repeat;
 }
 
 .main {
@@ -745,8 +736,8 @@ li {
   text-align: center;
 }
 
-.grid-6-5 {
-  grid-template-columns: repeat(6, 1fr);
+.grid-5-5 {
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
 }
 
@@ -1114,6 +1105,11 @@ h3 {
   cursor: pointer;
 }
 
+.div-grid-apps {
+  width: 70%;
+  padding-top: 4rem;
+}
+
 /***************************************AUTH***************************************************/
 .box-auth {
   background-color: #fff;
@@ -1209,8 +1205,43 @@ h3 {
 /***********************************************************************************************************/
 /***************************************RESPONSIVES***************************************************/
 /***********************************************************************************************************/
+@media screen and (max-width: 992px) {
+  body {
+    height: 150vh;
+  }
+  .grid-5-5-lg {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .grid-4-5-lg {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .grid-3-5-lg {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .grid-2-5-lg {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .grid-1-10-lg {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+  .grid-1-3-lg {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .justify-center-tablet {
+    justify-content: center !important;
+  }
+}
 /***************************************TABLETS***************************************************/
 @media screen and (max-width: 768px) {
+  body {
+    height: 150vh;
+  }
   .m-tablet-1 {
     margin: 1rem !important;
   }
@@ -1807,16 +1838,33 @@ h3 {
     width: 100% !important;
     display: block;
   }
-}
-/***************************************MOBILES***************************************************/
-@media screen and (max-width: 420px) {
-  .header {
-    background-color: #1784C7;
-    padding: 3rem 1.5rem;
+  .grid-6-5-md {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
   }
-  .footer {
-    background-color: #1784C7;
-    padding: 3rem 1.5rem;
+  .grid-3-5-md {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .grid-2-5-md {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .grid-1-10-md {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+  .grid-1-3-md {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .box-home-app {
+    width: 10rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  body {
+    height: 100vh;
   }
   .main {
     background-image: url("../imgs/2542.png");
@@ -1853,36 +1901,6 @@ h3 {
     align-items: center;
     gap: 1rem;
   }
-  .col-mobile-10 {
-    width: 10% !important;
-  }
-  .col-mobile-20 {
-    width: 20% !important;
-  }
-  .col-mobile-30 {
-    width: 30% !important;
-  }
-  .col-mobile-40 {
-    width: 40% !important;
-  }
-  .col-mobile-50 {
-    width: 50% !important;
-  }
-  .col-mobile-60 {
-    width: 60% !important;
-  }
-  .col-mobile-70 {
-    width: 70% !important;
-  }
-  .col-mobile-80 {
-    width: 80% !important;
-  }
-  .col-mobile-90 {
-    width: 90% !important;
-  }
-  .col-mobile-100 {
-    width: 100% !important;
-  }
   .justify-mobile-center {
     justify-content: center !important;
   }
@@ -1895,6 +1913,40 @@ h3 {
   .justify-mobile-around {
     justify-content: space-around !important;
   }
+  .box-auth {
+    background: none;
+    box-shadow: none;
+    width: 80%;
+    transform: scale(1.2);
+  }
+  .input {
+    background: none;
+  }
+  .footer-xxl {
+    display: none;
+  }
+  .d-none-mobile {
+    display: none !important;
+  }
+  .d-block-mobile {
+    display: block !important;
+  }
+  .box-home-app {
+    flex-direction: row !important;
+    height: auto !important;
+    width: 100%;
+    padding: 2rem;
+    justify-content: start;
+  }
+  .div-nav-mobile {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: #fff;
+    height: 10vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
 }
+/***************************************MOBILES***************************************************/
 
 /*# sourceMappingURL=style.css.map */
