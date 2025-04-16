@@ -930,6 +930,10 @@ h3 {
   color: #1784C7;
 }
 
+.header {
+  background-color: #1784C7;
+}
+
 /***************************************HOME***************************************************/
 .nav-home {
   color: #5A595B;
@@ -961,6 +965,7 @@ h3 {
   top: 8%;
   right: 2%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: none;
 }
 
 .tittle-navbar-user {
@@ -1189,6 +1194,31 @@ h3 {
 /***************************************PROYECTOS***************************************************/
 /***************************************TAREAS***************************************************/
 /***************************************CONTACTOS***************************************************/
+.search {
+  width: 100%;
+  padding: 0.5em;
+}
+
+.box-search-icon {
+  padding: 0.4rem;
+  background-color: #1784C7;
+}
+
+.select-complements {
+  padding: 0.3rem;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 5px;
+  margin: 0px 0.2rem;
+  cursor: pointer;
+  background: none;
+}
+
+.select-complements:hover {
+  background-color: #dadee5;
+}
+
 /***************************************FOOTER***************************************************/
 .a-footer {
   font-family: "Jura";

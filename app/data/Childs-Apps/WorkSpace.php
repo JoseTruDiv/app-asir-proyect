@@ -1,13 +1,13 @@
 <?php
 
-    class Calendario{
+    class WorkSpace{
         public $name;
         public $img;
         public $url;
 
         function __construct() {
-            $this->name='CALENDAR';
-            $this->img='/app/imgs/apps/app_calendar.svg';
+            $this->name='WORKSPACE';
+            $this->img='/app/imgs/apps/app_workspace.svg';
             $this->url='https://calendar.google.com';
         }
 

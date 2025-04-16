@@ -1,7 +1,6 @@
 window.addEventListener('load',()=>{
 
     /****************************************************************************************************FORMULARIO DE REGISTRO*******************/
-
         if (HTML.formReg !== null) {
             HTML.formReg.addEventListener('submit',(e)=>{
                 e.preventDefault();
@@ -24,36 +23,47 @@ window.addEventListener('load',()=>{
 
         var palancaheight = 0;
 
-        HTML.navUser.addEventListener('click',()=>{
-            if (palancaheight === 0) {
-                HTML.dropdownUser.classList.add('animation-height');
-                HTML.dropdownUser.classList.remove('animation-height-off');
-                HTML.dropdownUser.classList.remove('animation-height-into');
-                palancaheight = 1;
-            }else{
-                HTML.dropdownUser.classList.remove('animation-height');
-                HTML.dropdownUser.classList.add('animation-height-into');
-                palancaheight = 0;
-            }
-            
-        })
+        if (HTML.navUser !== null) {
+            HTML.navUser.addEventListener('click',()=>{
+                if (palancaheight === 0) {
+                    HTML.dropdownUser.classList.add('animation-height');
+                    HTML.dropdownUser.classList.remove('animation-height-off');
+                    HTML.dropdownUser.classList.remove('animation-height-into');
+                    HTML.dropdownUser.style.display='block';
+                    palancaheight = 1;
+                }else{
+                    HTML.dropdownUser.classList.remove('animation-height');
+                    HTML.dropdownUser.classList.add('animation-height-into');
+                    HTML.dropdownUser.style.display='none';
+                    palancaheight = 0;
+                }
+                
+            })
+        }
+       
+
+        if (HTML.navHome !== null) {
+            HTML.navHome.addEventListener('click',()=>{
+                HTML.slidebarHome.classList.add('slidebar-home');
+                HTML.slidebarHome.classList.remove('slidebar-off');
+                HTML.slidebarHome.classList.remove('slidebar-reverse'); 
+            })
+        }
 
 
+        if (HTML.closedSlidebar !== null) {
+            HTML.closedSlidebar.addEventListener('click',()=>{
+                HTML.slidebarHome.classList.add('slidebar-reverse');
+                HTML.slidebarHome.classList.remove('slidebar-home');
+            })
+        }
+       
 
-        HTML.navHome.addEventListener('click',()=>{
-            HTML.slidebarHome.classList.add('slidebar-home');
-            HTML.slidebarHome.classList.remove('slidebar-off');
-            HTML.slidebarHome.classList.remove('slidebar-reverse'); 
-        })
-
-        HTML.closedSlidebar.addEventListener('click',()=>{
-            HTML.slidebarHome.classList.add('slidebar-reverse');
-            HTML.slidebarHome.classList.remove('slidebar-home');
-        })
-
-        HTML.sshClipServer.addEventListener('click',()=>{
-            console.log(this.innerWidth);
-        })
+       if (HTML.sshClipServer !== null) {
+            HTML.sshClipServer.addEventListener('click',()=>{
+                console.log(this.innerWidth);
+            })
+       }
      
      /****************************************************************************************************HOME*******************/
 
