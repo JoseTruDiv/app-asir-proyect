@@ -732,6 +732,10 @@ li {
   align-items: center;
 }
 
+.align-end {
+  align-items: end;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1190,9 +1194,63 @@ h3 {
     transform: translateY(0px);
   }
 }
-/***************************************INICIO***************************************************/
-/***************************************PROYECTOS***************************************************/
-/***************************************TAREAS***************************************************/
+/***************************************USUARIOS***************************************************/
+.table-user {
+  border-collapse: collapse;
+  border: 1px solid #f1f1f1;
+}
+
+.table-user > tbody > tr:nth-of-type(even) > td {
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+  padding: 1rem;
+  color: #000;
+  font-family: "Jura";
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.table-user > tbody > tr:nth-of-type(odd) > td {
+  background-color: #d3d2d2;
+  border: 1px solid #f1f1f1;
+  padding: 1rem;
+  color: #000;
+  font-family: "Jura";
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.tr-first > td {
+  background-color: #1784C7 !important;
+  border: 1px solid #f1f1f1;
+  padding: 1rem;
+  color: #fff !important;
+  font-family: "Jura";
+  font-size: 1rem;
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.td-check {
+  width: 5% !important;
+}
+
+.a-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #999;
+}
+
+.a-enabled {
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+  text-decoration: none;
+  color: #1784C7;
+}
+
 /***************************************CONTACTOS***************************************************/
 .search {
   width: 100%;

@@ -294,6 +294,10 @@ li{
     align-items: center;
 }
 
+.align-end{
+    align-items: end;
+}
+
 .text-center{
     text-align: center;
 }
@@ -693,24 +697,70 @@ h3{
 }
 
 
-/***************************************INICIO***************************************************/
+/***************************************USUARIOS***************************************************/
+
+.table-user{
+    border-collapse: collapse;
+    border: 1px solid #f1f1f1;
+}
 
 
 
+.table-user>tbody>tr:nth-of-type(even)>td{
+    background-color: #fff;
+    border: 1px solid #f1f1f1;
+    padding: 1rem;
+    color: #000;
+    font-family: get-map($font-text, 'family');
+    font-size: get-map($font-text, 'size');
+    font-weight: get-map($font-text, 'weight');
+    font-style: get-map($font-text, 'style');
+    line-height: get-map($font-text, 'height');
+}
 
+.table-user>tbody>tr:nth-of-type(odd)>td{
+    background-color: #d3d2d2;
+    border: 1px solid #f1f1f1;
+    padding: 1rem;
+    color: #000;
+    font-family: get-map($font-text, 'family');
+    font-size: get-map($font-text, 'size');
+    font-weight: get-map($font-text, 'weight');
+    font-style: get-map($font-text, 'style');
+    line-height: get-map($font-text, 'height');
+}
 
-/***************************************PROYECTOS***************************************************/
+.tr-first>td{
+    background-color: $color-principal !important;
+    border: 1px solid #f1f1f1;
+    padding: 1rem;
+    color: #fff !important;
+    font-family: get-map($font-text, 'family');
+    font-size: get-map($font-text, 'size');
+    font-weight: bolder;
+    font-style: get-map($font-text, 'style');
+    line-height: get-map($font-text, 'height');
+}
 
+.td-check{
+    width: 5% !important;
+}
 
+.a-disabled{
+    opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: #999; 
+}
 
-
-
-/***************************************TAREAS***************************************************/
-
-
-
-
-
+.a-enabled{
+    opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+  text-decoration: none;
+  color: $color-principal; 
+}
 
 /***************************************CONTACTOS***************************************************/
 
