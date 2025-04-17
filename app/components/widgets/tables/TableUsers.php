@@ -9,6 +9,15 @@
             <td>Departamento</td>
             <td>Rol</td>
         </tr>
+
+        <?php
+
+            $path = $GLOBALS['path'];
+            require_once $path->CONTROLLERS.'/GetUsersController.php';
+
+
+        ?>
+
         <tr>
             <td class="td-check"><input type="checkbox" name="" id=""></td>
             <td>idUser</td>

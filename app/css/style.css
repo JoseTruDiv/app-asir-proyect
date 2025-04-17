@@ -682,6 +682,10 @@ body {
   display: flex;
 }
 
+a {
+  text-decoration: none;
+}
+
 li {
   list-style: none;
 }
@@ -1042,6 +1046,7 @@ h3 {
   position: absolute;
   top: 0px;
   left: 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   background-color: #fff;
   animation: ease-out 1s animation-sidebar;
 }
@@ -1149,7 +1154,6 @@ h3 {
 .btn-auth {
   background-color: #1784C7;
   color: #fff;
-  padding: 0.6rem 3rem;
   cursor: pointer;
   border: none;
   outline: none;
@@ -1157,6 +1161,18 @@ h3 {
 
 .btn-auth:hover {
   background-color: #5FC4E6;
+}
+
+.btn-cancel {
+  background-color: none;
+  color: #1784C7;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.btn-cancel:hover {
+  color: #5A595B;
 }
 
 .box-alta {
@@ -1249,6 +1265,34 @@ h3 {
   cursor: pointer;
   text-decoration: none;
   color: #1784C7;
+}
+
+.input-user {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #000;
+}
+
+.input-user:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.select-users {
+  padding: 1rem;
+  background-color: #1784C7;
+  color: #fff;
+  border-radius: 0.2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.select-users:hover {
+  opacity: 0.9;
 }
 
 /***************************************CONTACTOS***************************************************/
