@@ -12,11 +12,11 @@
             <a href="/home" class="text a-session">Home</a> / <a class="text a-session" href="/admin">Admin</a>
         </div>
         <div class="d-flex pt-1 g-1">
-            <a href="#" class="btn-auth text py-1 px-2">Añadir</a> <a class="btn-cancel text py-1 px-1" href="/admin">Cancelar</a>
+            <a id="addUsers" href="#" class="btn-auth text py-1 px-2">Añadir</a> <a class="btn-cancel text py-1 px-1" href="/admin">Cancelar</a>
         </div>
     </div>
     <div style="height: 100%;background-color: #f1f1f1;z-index: 0;">
-        <form class="pt-5 px-3" action="">
+        <form id="registroUser" class="pt-5 px-3" action="/regstroUserController" method="post">
             <div class="row">
                 <div class="w-50 px-2">
                     <div>
@@ -37,12 +37,15 @@
                     <div>
                         <input class="input-user" type="password" name="reapeatPasswdlUser" id="reapeatPasswdlUser" placeholder="**********" required>
                     </div>
+                    <div>
+                        <p id="errorPasswd" class="text-error"></p>
+                    </div>
                     <div class="pt-1">
                         <select class="select-users text w-100"  name="rolUser" id="rolUser" required>
                             <option value="0">--Selecciona el rol del usuario--</option>
                             <option value="1">Admin</option>
                             <option value="2">Usuario</option>
-                            <option value="1">Desarrollador</option>
+                            <option value="3">Desarrollador</option>
                         </select>
                     </div>
                 </div>
@@ -54,16 +57,16 @@
                         <input class="input-user" type="text" name="nameUser" id="nameUser" placeholder="Nombre del usuario..." required>
                     </div>
                     <div class="pt-1">
-                        <label class="text" for="nameUser">Apellido del usuario</label>
+                        <label class="text" for="lastNameUser">Apellido del usuario</label>
                     </div>
                     <div>
-                        <input class="input-user" type="text" name="nameUser" id="nameUser" placeholder="Apellido del usuario...">
+                        <input class="input-user" type="text" name="lastNameUser" id="lastNameUser" placeholder="Apellido del usuario...">
                     </div>
                     <div class="pt-1">
-                        <label class="text" for="nameUser">Departamento del usuario</label>
+                        <label class="text" for="departamentoUser">Departamento del usuario</label>
                     </div>
                     <div>
-                        <input class="input-user" type="text" name="nameUser" id="nameUser" placeholder="Departamento del usuario...">
+                        <input class="input-user" type="text" name="departamentoUser" id="departamentoUser" placeholder="Departamento del usuario...">
                     </div>
                 </div>
             </div>
@@ -80,4 +83,13 @@
     }else{
         header('Location: /404');
     }
+?>
+
+<?php
+      if (isset($_SESSION['registroUser'])) {
+
+        include $path->COMPONENTS.'/widgets/alerts/altaAlert.php'; 
+        unset($_SESSION['registroUser']);
+    }
+
 ?>

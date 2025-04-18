@@ -1295,6 +1295,13 @@ h3 {
   opacity: 0.9;
 }
 
+.text-error {
+  font-family: "Jura";
+  font-size: 1rem;
+  font-style: normal;
+  color: red;
+}
+
 /***************************************CONTACTOS***************************************************/
 .search {
   width: 100%;

@@ -1,3 +1,11 @@
+<?php
+
+    if (isset($_SESSION['idRol'])) {
+        # code...
+
+?>
+
+
 <div class="container d-none-mobile" style="flex-direction: column;">
 
     <?php
@@ -86,4 +94,12 @@
 
 <?php
     include $GLOBALS['path']->HOMEMOBILE;
+?>
+
+<?php
+
+}else{
+    header('Location: /');
+} 
+
 ?>

@@ -12,5 +12,13 @@ const HTML = {
     sshServer: document.getElementById('ssh-server'),
     sshCliente: document.getElementById('ssh-cliente'),
     sshClipServer: document.getElementById('copy-ssh-server'),
-    sshClipCliente: document.getElementById('copy-ssh-cliente')
+    sshClipCliente: document.getElementById('copy-ssh-cliente'),
+    registroUser: document.getElementById('registroUser'),
+    addUsers: document.getElementById('addUsers'),
+    passwdUser: document.getAnimations('passwdUser'),
+    reapeatPasswdlUser: document.getElementById('reapeatPasswdlUser'),
+    errorPass: document.getElementById('errorPasswd'),
+    afterUsers: document.getElementById('afterUsers'),
+    beforeUsers: document.getElementById('beforeUsers'),
+    checkBoxClass: document.getElementsByClassName('check-box'),
 }

@@ -1,4 +1,4 @@
-<div id="slidebar-home" class="slidebar-off">
+<div id="slidebar-home" class="slidebar-off" style="z-index: 10;">
     <div class="d-flex justify-end p-1">
         <a id="closed-slidebar" class="closed-slidebar" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" height="30" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">

@@ -14,7 +14,7 @@
                 </div>
                 
                 <div class="row justify-center mt-2">
-                    <button class="btn-auth text">Enviar</button>
+                    <button class="btn-auth text  px-3 py-1">Enviar</button>
                 </div>
             </form>
             <div>

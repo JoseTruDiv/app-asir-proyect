@@ -1,8 +1,4 @@
 
-
-
-
-
 <div class="d-flex w-100">
     <table class="table-user w-100">
         <tr class="tr-first">
@@ -40,6 +36,12 @@ if ($arrayUsers == 0) {
 
 }else{
 
+
+    if (count($arrayUsers)<=6) {
+
+        var_dump('Es menor o igual a 6');
+  
+
     foreach ($arrayUsers as $array) {
 ?>
     <tr>
@@ -71,6 +73,57 @@ if ($arrayUsers == 0) {
 
 
 <?php
+
+
+        }
+    }else{
+        $count = 0;
+        $div = 0;
+
+        foreach ($arrayUsers as $array) {
+            ?>
+                
+                <tr class="<?php echo "div-$div"; if ($div>0) {
+                    echo " d-none";
+                } ?>">
+                <td class="td-check"><input class="check-box" type="checkbox" name="<?php echo 'idUser'.$array[0];  ?>" id="<?php echo 'idUser'.$array[0];  ?>"></td>
+                <td><?php echo $array[0];  ?></td>
+                <td><?php echo $array[1];  ?></td>
+                <td><?php echo $array[2];  ?></td>
+                <td><?php echo $array[3];  ?></td>
+                <td><?php echo $array[4];  ?></td>
+                <td>
+                    <?php
+            
+                        switch ($array[5]) {
+                            case 1:
+                                echo 'Administrador';
+                                break;
+                            case 2:
+                                echo 'Usuario';
+                                break;
+                            case 3:
+                                echo 'Desarrollador';
+                                break;
+                        }
+            
+                    ?>
+                </td> 
+                </tr>
+                  
+            
+            
+            <?php
+
+                $count++;
+
+                if ($count == 6) {
+                    $count = 0;
+                    $div++;
+                }
+
+                    }
+
 
 
     }

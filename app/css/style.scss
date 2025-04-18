@@ -806,6 +806,15 @@ h3{
     opacity: 0.9;
 }
 
+.text-error{
+    font-family: get-map($font-text, 'family');
+    font-size: get-map($font-text, 'size');
+    font-weight: get-map($font-text, 'weight');
+    font-style: get-map($font-text, 'style');
+    line-height: get-map($font-text, 'height');
+    color: red;
+}
+
 /***************************************CONTACTOS***************************************************/
 
 .search{

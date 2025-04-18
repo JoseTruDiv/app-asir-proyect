@@ -36,7 +36,7 @@
                     </a>
                 </div>
                 <div class="row justify-center mt-2">
-                    <button class="btn-auth text">Registrarme</button>
+                    <button class="btn-auth text  px-3 py-1">Registrarme</button>
                 </div>
             </form>
     </div>
