@@ -16,9 +16,14 @@ class Path{
     public $DB;
     public $LOGINPASS;
     public $DATA;
-    public $CONTACTS;
-    public $PROYECTS;
     public $HOMEMOBILE;
+    public $HEADER;
+    public $WIDGETS;
+    public $ADMIN;
+    public $ERROR_PAGE;
+    public $CLOSEDSESSION;
+    public $TABLEUSER;
+    public $ADDUSERS;
 
     public function __construct() {
       $this->SRC = realpath(__DIR__ . '/..');
@@ -36,9 +41,14 @@ class Path{
       $this->MODELS = realpath(__DIR__ . '/../models/');
       $this->DB = realpath(__DIR__ . '/../db/');
       $this->DATA = realpath(__DIR__ . '/../../app/data');
-      $this->CONTACTS = realpath(__DIR__.'/../../app/components/pages/Contactos.php');
-      $this->PROYECTS = realpath(__DIR__.'/../../app/components/pages/Proyectos.php');
       $this->HOMEMOBILE = realpath(__DIR__.'/../../app/components/pages/HomeMobile.php');
+      $this->HEADER = realpath(__DIR__.'/../../app/components/pages/Header.php');
+      $this->WIDGETS = realpath(__DIR__.'/../../app/components/widgets/');
+      $this->ADMIN = realpath(__DIR__.'/../../app/components/pages/Administrador.php');
+      $this->ERROR_PAGE = realpath(__DIR__.'/../../app/components/pages/404.php');
+      $this->CLOSEDSESSION = realpath(__DIR__ . '/../controllers/ClosedSessionController.php');
+      $this->TABLEUSER = realpath(__DIR__.'/../../app/components/widgets/tables/TableUsers.php');
+      $this->ADDUSERS = realpath(__DIR__ . '/../../app/components/pages/AddUsers.php');
   }
 
 }

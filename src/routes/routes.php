@@ -17,19 +17,30 @@ $GLOBALS['path'] = $path;
 
 require_once $path->CONTROLLERS.'/RegistroAdminController.php';
 require_once $path->CONTROLLERS.'/LoginController.php';
+require_once $path->CONTROLLERS.'/RegistroUsersController.php';
+require_once $path->CONTROLLERS.'/AlterUsersController.php';
+require_once $path->CONTROLLERS.'/DelUsersController.php';
 $RegistroAdminController = new RegistroAdminController();
 $LoginController = new LoginController();
+$RegistroUsersController = new RegistroUsersController();
+$AlterUsersController = new AlterUsersController();
+$DelUsersController = new DelUsersController();
 
 $rutas = [
     "/" => $path->LOGIN,
     "/registro" => $path->REGISTRO,
     "/loginpass" => $path->LOGINPASS,
     "/home" => $path->HOME,
-    "/contactos" => $path->CONTACTS,
-    "/proyectos" => $path->PROYECTS,
+    "/admin" => $path->ADMIN,
+    "/404" => $path->ERROR_PAGE,
+    "/closed_session" => $path->CLOSEDSESSION,
+    "/addUsers" => $path->ADDUSERS,
     'POST' => [
         "/registroAdminController" => [$RegistroAdminController, 'index'],
         "/loginController" => [$LoginController, 'index'],
+        "/regstroUserController" => [$RegistroUsersController,'index'],
+        "/alterUserController" => [$AlterUsersController,'index'],
+        "/delUsersController" => [$DelUsersController,'index'],
     ],
 ];
 

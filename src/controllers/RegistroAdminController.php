@@ -26,7 +26,12 @@ class RegistroAdminController{
 
         $MODEL = new UsuariosModels();
 
-        $MODEL->addUser($registro);
+
+        $registro = $MODEL->addUser($registro);
+
+        if ($registro==1) {
+            header('Location: /');
+        }
     }
 
 }

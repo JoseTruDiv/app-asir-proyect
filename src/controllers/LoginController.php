@@ -11,16 +11,19 @@ class LoginController{
             $name = htmlspecialchars($_POST['nameLogin']);
             $loginController->setUser($name);
         }elseif($function == 'authUser'){
-            session_start();
+            if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }
             $password = htmlspecialchars($_POST['passLogin']);
             $name = $_SESSION['nameLogin'];
-            unset($_SESSION['nameLogin']);
             $loginController->authUser($name,$password);
         }
     }
 
     function setUser($name){
-        session_start();
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
         $_SESSION['nameLogin'] = $name;
         header('Location: /loginpass');
     }
@@ -31,7 +34,9 @@ class LoginController{
         if ($bool == 1) {
             header('Location: /home');
         }else{
-            session_start();
+            if (session_status() === PHP_SESSION_NONE) {
+                session_start();
+            }
             $_SESSION['inicio'] = 'ErrorPass';
             header('Location: /');
         }

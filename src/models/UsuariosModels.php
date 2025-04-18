@@ -5,23 +5,50 @@ require_once __DIR__.'/../db/database.php';
 
 class UsuariosModels{
     function addUser($arrayUser){
-        $query = "INSERT INTO usuarios (nombre,apellido,email,departamento,password,idRol) VALUES (?,?,?,?,?,?)";
 
-        $bbdd = db();
+        try {
+                $query = "INSERT INTO usuarios (nombre,apellido,email,departamento,password,idRol) VALUES (?,?,?,?,?,?)";
+            $bbdd = db();
 
-        $stmp = $bbdd->prepare($query);
+            $stmp = $bbdd->prepare($query);
 
-        $stmp->bind_param('sssssi',$arrayUser['nombre'],$arrayUser['apellido'],$arrayUser['email'],$arrayUser['departamento'],$arrayUser['password'],$arrayUser['idRol']);
+            $stmp->bind_param('sssssi',$arrayUser['nombre'],$arrayUser['apellido'],$arrayUser['email'],$arrayUser['departamento'],$arrayUser['password'],$arrayUser['idRol']);
 
-        $stmp->execute();
+            $stmp->execute();
 
-        $stmp->close();
+            $stmp->close();
 
-        session_start();
+            $_SESSION['registroUser']=true;
 
-        $_SESSION['registroUser']=true;
+            return 1;
+        } catch (\Throwable $th) {
+            return 0;
+        }
         
-        header('Location: /');
+    }
+
+
+    function editUser($arrayUser){
+
+        try {
+                $query = "UPDATE usuarios SET nombre = ?, apellido=?, email=?, departamento=?, password=?, idRol=? WHERE id=?";
+            $bbdd = db();
+
+            $stmp = $bbdd->prepare($query);
+
+            $stmp->bind_param('sssssii',$arrayUser['nombre'],$arrayUser['apellido'],$arrayUser['email'],$arrayUser['departamento'],$arrayUser['password'],$arrayUser['idRol'],$arrayUser['id']);
+
+            $stmp->execute();
+
+            $stmp->close();
+
+            $_SESSION['editUser']=true;
+
+            return 1;
+        } catch (\Throwable $th) {
+            return 0;
+        }
+        
     }
 
 
@@ -42,6 +69,46 @@ class UsuariosModels{
 
         return $resultado;
     }
+
+
+    function getUser($idUser){
+        try {
+
+        $arrayUser = [];
+
+        $query = db()->query("SELECT nombre,apellido,email,departamento,idRol FROM usuarios WHERE id=$idUser");
+
+        $arrayUser = $query->fetch_assoc();
+
+        return $arrayUser;
+
+    } catch (\Throwable $th) {
+        return 0;
+    }
+}
+
+
+    function getUsers(){
+            try {
+
+            $arrayUsers = [];
+
+            $query = db()->query("SELECT id,nombre,apellido,email,departamento,idRol FROM usuarios");
+
+            $row = $query->num_rows;
+
+            for ($i=0; $i < $row; $i++) { 
+                array_push($arrayUsers,$query->fetch_row());
+            }
+
+            return $arrayUsers;
+
+        } catch (\Throwable $th) {
+            return 0;
+        }
+    }
+
+    
 
 
     function getLoginUsers($name,$pass){
@@ -70,4 +137,19 @@ class UsuariosModels{
             return 0;
         }
     }
+
+
+
+    function delUsers($arrayUsers){
+
+        try {
+            foreach ($arrayUsers as $value) {
+                db()->query("DELETE FROM usuarios WHERE id=$value");
+            }
+            return 1;
+        } catch (\Throwable $th) {
+            return 0;
+        }
+    }
+
 }
