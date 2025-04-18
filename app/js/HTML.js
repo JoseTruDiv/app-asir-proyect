@@ -22,6 +22,10 @@ const HTML = {
     beforeUsers: document.getElementById('beforeUsers'),
     checkBoxClass: document.getElementsByClassName('check-box'),
     boxEditUser: document.getElementById('box-pupups-editUser'),
+    boxDelUser: document.getElementById('box-pupups-delUser'),
     editUser: document.getElementById('editUser'),
+    delUser: document.getElementById('delUser'),
     closedEditUser: document.getElementById('closed-popup'),
+    closedDelUser: document.getElementById('del-closed-popup'),
+    boxInputDelusers: document.getElementById('box-input-delusers'),
 }

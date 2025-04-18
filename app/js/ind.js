@@ -5,6 +5,7 @@ window.addEventListener('load',()=>{
        /****************************************************************************************************VARIABLES GLOBALES*******************/
 
     var idUserChecked;
+    var idUsersChecked=[];
     var idUserCheck;
     var nameEditUser;
 
@@ -133,6 +134,7 @@ window.addEventListener('load',()=>{
                                 document.getElementById('delUser').classList.remove('a-disabled')
                                 document.getElementById('editUser').classList.add('a-disabled')
                                 document.getElementById('editUser').classList.remove('a-enabled')
+                                idUsersChecked.push(item.id);
                                 break;
                             case checkedNumber===1:
                                 document.getElementById('delUser').classList.add('a-enabled')
@@ -140,6 +142,7 @@ window.addEventListener('load',()=>{
                                 document.getElementById('editUser').classList.add('a-enabled')
                                 document.getElementById('editUser').classList.remove('a-disabled')
                                 idUserChecked = item.id;
+                                idUsersChecked.push(item.id);
                                 break;
                         }
 
@@ -165,6 +168,39 @@ window.addEventListener('load',()=>{
                 })
             }
 
+
+            if (HTML.boxDelUser!==null && HTML.delUser!==null) {
+                document.getElementById('delUser').addEventListener('click',()=>{
+                    let idUsersFormat = [];
+                    idUserCheck = idUserChecked.split('-')[1];
+
+                    for (const item of idUsersChecked) {
+                        idUsersFormat.push(item.split('-')[1]);
+                    }
+
+                    console.log(idUsersFormat);
+
+                    for (const value of idUsersFormat) {
+
+                        const inputHidden = document.createElement('input');
+
+                        inputHidden.setAttribute('type','hidden');
+
+                        inputHidden.setAttribute('value',value);
+
+                        inputHidden.setAttribute('name','idUser-'+value);
+
+                        document.getElementById('box-input-delusers').appendChild(inputHidden);
+                    }
+
+                    HTML.boxDelUser.classList.remove('d-none');
+
+                })
+
+                HTML.closedDelUser.addEventListener('click',()=>{
+                    HTML.boxDelUser.classList.add('d-none');
+                })
+            }
 
            
 

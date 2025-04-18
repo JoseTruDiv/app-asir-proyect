@@ -46,6 +46,10 @@ include $GLOBALS['path']->WIDGETS.'/popups/EditUserBox.php';
 ?>
 
 <?php
+include $GLOBALS['path']->WIDGETS.'/popups/DelUserBox.php';
+?>
+
+<?php
       if (isset($_SESSION['editUser'])) {
 
         include $path->COMPONENTS.'/widgets/alerts/altaAlert.php'; 
@@ -54,6 +58,14 @@ include $GLOBALS['path']->WIDGETS.'/popups/EditUserBox.php';
 
 ?>
 
+<?php
+      if (isset($_SESSION['delUsers'])) {
+
+        include $path->COMPONENTS.'/widgets/alerts/delUsersAlert.php'; 
+        unset($_SESSION['delUsers']);
+    }
+
+?>
 
 
 <?php
