@@ -40,8 +40,25 @@
         ?>
     </div>
 </div>
+
+<?php
+include $GLOBALS['path']->WIDGETS.'/popups/EditUserBox.php';
+?>
+
+<?php
+      if (isset($_SESSION['editUser'])) {
+
+        include $path->COMPONENTS.'/widgets/alerts/altaAlert.php'; 
+        unset($_SESSION['editUser']);
+    }
+
+?>
+
+
+
 <?php
     }else{
         header('Location: /404');
     }
 ?>
+

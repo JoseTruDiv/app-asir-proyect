@@ -21,4 +21,7 @@ const HTML = {
     afterUsers: document.getElementById('afterUsers'),
     beforeUsers: document.getElementById('beforeUsers'),
     checkBoxClass: document.getElementsByClassName('check-box'),
+    boxEditUser: document.getElementById('box-pupups-editUser'),
+    editUser: document.getElementById('editUser'),
+    closedEditUser: document.getElementById('closed-popup'),
 }

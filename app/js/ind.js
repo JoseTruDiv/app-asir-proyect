@@ -1,4 +1,14 @@
 window.addEventListener('load',()=>{
+
+
+
+       /****************************************************************************************************VARIABLES GLOBALES*******************/
+
+    var idUserChecked;
+    var idUserCheck;
+    var nameEditUser;
+
+
     /****************************************************************************************************FORMULARIO DE REGISTRO*******************/
         if (HTML.formReg !== null) {
             HTML.formReg.addEventListener('submit',(e)=>{
@@ -106,7 +116,6 @@ window.addEventListener('load',()=>{
                 for (const item of HTML.checkBoxClass) {
                     item.addEventListener('change',()=>{
                         if (item.checked === true) {
-                            console.log('entra')
                             checkedNumber++;
                         }else{
                             checkedNumber--;
@@ -130,15 +139,30 @@ window.addEventListener('load',()=>{
                                 document.getElementById('delUser').classList.remove('a-disabled')
                                 document.getElementById('editUser').classList.add('a-enabled')
                                 document.getElementById('editUser').classList.remove('a-disabled')
+                                idUserChecked = item.id;
                                 break;
-                        }
-
-                        if (checkedNumber>1) {
-                           
                         }
 
                     })
                 }
+            }
+
+
+            if (HTML.boxEditUser!==null && HTML.editUser!==null) {
+                HTML.editUser.addEventListener('click',()=>{
+                    idUserCheck = idUserChecked.split('-')[1];
+                    HTML.boxEditUser.classList.remove('d-none');
+                    nameEditUser = document.getElementsByClassName('idUser-'+idUserCheck)[0].value; 
+
+                    document.getElementById('nameUser').innerHTML=nameEditUser;
+
+                    document.getElementById('editIdUser').value=idUserCheck;
+
+                })
+
+                HTML.closedEditUser.addEventListener('click',()=>{
+                    HTML.boxEditUser.classList.add('d-none');
+                })
             }
 
 

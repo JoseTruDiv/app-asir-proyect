@@ -79,11 +79,6 @@
         background-image: none !important;
     }
 </style>
-<?php
-    }else{
-        header('Location: /404');
-    }
-?>
 
 <?php
       if (isset($_SESSION['registroUser'])) {
@@ -93,3 +88,10 @@
     }
 
 ?>
+
+<?php
+    }else{
+        header('Location: /404');
+    }
+?>
+

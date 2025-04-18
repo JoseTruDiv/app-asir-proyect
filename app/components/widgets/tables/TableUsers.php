@@ -38,14 +38,16 @@ if ($arrayUsers == 0) {
 
 
     if (count($arrayUsers)<=6) {
-
-        var_dump('Es menor o igual a 6');
   
 
     foreach ($arrayUsers as $array) {
 ?>
     <tr>
-    <td class="td-check"><input type="checkbox" name="<?php echo 'idUser'.$array[0];  ?>" id="<?php echo 'idUser'.$array[0];  ?>"></td>
+    <td class="td-check">
+        
+    <input class="check-box" type="checkbox" name="<?php echo 'idUser-'.$array[0];  ?>" id="<?php echo 'idUser-'.$array[0];  ?>">
+    
+    <input type="hidden" class="idUser-<?php echo $array[0];?>" value="<?php echo $array[1];  ?>"></td>
     <td><?php echo $array[0];  ?></td>
     <td><?php echo $array[1];  ?></td>
     <td><?php echo $array[2];  ?></td>
@@ -86,7 +88,11 @@ if ($arrayUsers == 0) {
                 <tr class="<?php echo "div-$div"; if ($div>0) {
                     echo " d-none";
                 } ?>">
-                <td class="td-check"><input class="check-box" type="checkbox" name="<?php echo 'idUser'.$array[0];  ?>" id="<?php echo 'idUser'.$array[0];  ?>"></td>
+                <td class="td-check">
+        
+                <input class="check-box" type="checkbox" name="<?php echo 'idUser-'.$array[0];  ?>" id="<?php echo 'idUser-'.$array[0];  ?>">
+                
+                <input type="hidden" class="idUser-<?php echo $array[0];?>" value="<?php echo $array[1];  ?>"></td>
                 <td><?php echo $array[0];  ?></td>
                 <td><?php echo $array[1];  ?></td>
                 <td><?php echo $array[2];  ?></td>
