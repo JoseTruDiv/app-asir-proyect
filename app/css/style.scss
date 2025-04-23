@@ -255,7 +255,7 @@ li{
 }
 
 .d-none{
-    display: none;
+    display: none !important;
 }
 
 .d-block{
@@ -865,19 +865,58 @@ h3{
     background-color: #dadee5;
 }
 
-/***************************************FOOTER***************************************************/
-.a-footer{
-    font-family: get-map($font-text, 'family');
-    font-size: get-map($font-text, 'size');
-    font-weight: get-map($font-text, 'weight');
-    font-style: get-map($font-text, 'style');
-    text-decoration: none;
-    color: $color-terciario;
+
+/***************************************CONFIG***************************************************/
+
+.box-config{
+    background-color: #fff;
+    height: 70vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.a-footer:hover{
-    color: $color-secundario;
+
+.a-config-on{
+    background-color: #fff;
+    padding: 1rem;
 }
+
+.a-config-off{
+    background-color: #5A595B;
+    color: #fff;
+    padding: 1rem;
+}
+
+.a-config-off:hover{
+    background-color: #999;
+    color: #fff;
+}
+
+.a-config-off:active{
+    background-color: #fff;
+    color: $color-text;
+}
+
+.btn-auth-2{
+    background-color: #fff;
+    color: $color-principal;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.btn-auth-2:hover{
+    opacity: 0.9;
+}
+
+.a-github{
+    background-color: #5A595B;
+    color: #fff;
+}
+
+.a-github:hover{
+    opacity: 0.9;
+}
+
 
 
 /***********************************************************************************************************/

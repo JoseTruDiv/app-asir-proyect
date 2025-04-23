@@ -6,9 +6,7 @@
 ?>
 
 <div class="container px-3 pt-3 g-1" style="height: 77vh;flex-direction: column;">
-    <div class="d-flex pt-1">
-        <a href="/home" class="text a-session">Home</a> /
-    </div>
+    <?php include $GLOBALS['path']->WIDGETS.'/breadcrumbs/BreadHome.php';   ?>
     <div class="d-flex">
         <h3>Panel de administración de usuarios</h3>
     </div>

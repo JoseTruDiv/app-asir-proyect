@@ -14,7 +14,7 @@
     require_once $path->DATA.'/Childs-Apps/Analytics.php';
     require_once $path->DATA.'/Childs-Apps/Meets.php';
     require_once $path->DATA.'/Childs-Apps/Finance.php';
-    require_once $path->DATA.'/Childs-Apps/Workspace.php';
+    require_once $path->DATA.'/Childs-Apps/WorkSpace.php';
     require_once $path->DATA.'/Childs-Apps/Admin.php';
 
     class Apps{

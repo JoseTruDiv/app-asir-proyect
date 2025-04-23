@@ -35,6 +35,7 @@ $rutas = [
     "/404" => $path->ERROR_PAGE,
     "/closed_session" => $path->CLOSEDSESSION,
     "/addUsers" => $path->ADDUSERS,
+    "/config" => $path->CONFIG,
     'POST' => [
         "/registroAdminController" => [$RegistroAdminController, 'index'],
         "/loginController" => [$LoginController, 'index'],

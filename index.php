@@ -28,6 +28,5 @@ require __DIR__.'/app/data/Apps.php';
             include $rutas[$_SERVER['REQUEST_URI']];
         }
      ?>
-    <?php include $GLOBALS['path']->FOOTER; ?>
 </body>
 </html>

@@ -8,9 +8,7 @@
 
 <div class="container" style="height: 79vh;flex-direction: column;"> 
     <div class="row-column px-3 w-100" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 0px;height: 15vh;z-index: 1;">
-        <div class="d-flex">
-            <a href="/home" class="text a-session">Home</a> / <a class="text a-session" href="/admin">Admin</a>
-        </div>
+    <?php include $GLOBALS['path']->WIDGETS.'/breadcrumbs/BreadAdmin.php';   ?>
         <div class="d-flex pt-1 g-1">
             <a id="addUsers" href="#" class="btn-auth text py-1 px-2">Añadir</a> <a class="btn-cancel text py-1 px-1" href="/admin">Cancelar</a>
         </div>
@@ -50,7 +48,7 @@
                     </div>
                 </div>
                 <div class="w-50 px-2">
-                <div>
+                    <div>
                         <label class="text" for="nameUser">Nombre del usuario</label>
                     </div>
                     <div>

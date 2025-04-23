@@ -10,6 +10,7 @@ window.addEventListener('load',()=>{
     var nameEditUser;
 
 
+
     /****************************************************************************************************FORMULARIO DE REGISTRO*******************/
         if (HTML.formReg !== null) {
             HTML.formReg.addEventListener('submit',(e)=>{
@@ -234,6 +235,33 @@ window.addEventListener('load',()=>{
          /****************************************************************************************************ADD USERS PAGE*******************/
 
 
+
+
+
+         
+       /****************************************************************************************************CONFIG PAGE*******************/
+
+
+       if (document.getElementsByClassName('a-config')[0] !== null) {
+            for (const item of document.getElementsByClassName('a-config')) {
+                item.addEventListener('click',()=>{
+                    const id = item.id.split('-')[1];
+                    for (const box of document.getElementsByClassName('box')) {
+                        box.classList.add('d-none');
+                    }
+                    document.getElementById('box-'+id).classList.remove('d-none');
+                    for (const activo of document.getElementsByClassName('a-config-on')) {
+                        activo.classList.remove('a-config-on');
+                        activo.classList.add('a-config-off');
+                    }
+                    item.classList.remove('a-config-off');
+                    item.classList.add('a-config-on');
+                })
+            }
+        }
+
+
+        /****************************************************************************************************CONFIG PAGE*******************/
 
 
 

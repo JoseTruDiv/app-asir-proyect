@@ -24,6 +24,7 @@ class Path{
     public $CLOSEDSESSION;
     public $TABLEUSER;
     public $ADDUSERS;
+    public $CONFIG;
 
     public function __construct() {
       $this->SRC = realpath(__DIR__ . '/..');
@@ -49,6 +50,7 @@ class Path{
       $this->CLOSEDSESSION = realpath(__DIR__ . '/../controllers/ClosedSessionController.php');
       $this->TABLEUSER = realpath(__DIR__.'/../../app/components/widgets/tables/TableUsers.php');
       $this->ADDUSERS = realpath(__DIR__ . '/../../app/components/pages/AddUsers.php');
+      $this->CONFIG = realpath(__DIR__.'/../../app/components/pages/Config.php');
   }
 
 }
