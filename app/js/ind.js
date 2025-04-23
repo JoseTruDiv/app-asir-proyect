@@ -261,6 +261,22 @@ window.addEventListener('load',()=>{
         }
 
 
+        if (document.getElementsByClassName('active-input-seg')[0] !== null) {
+            for (const item of document.getElementsByClassName('active-input-seg')) {
+                item.addEventListener('change',()=>{
+                    if (item.checked) {
+                        item.previousElementSibling.classList.remove('disabled');
+                        item.previousElementSibling.disabled=false;
+                    }else{
+                        item.previousElementSibling.classList.add('disabled');
+                        item.previousElementSibling.disabled=true;
+                    }
+                    
+                })
+            }
+        }
+
+
         /****************************************************************************************************CONFIG PAGE*******************/
 
 

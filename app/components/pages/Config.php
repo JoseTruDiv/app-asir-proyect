@@ -1,5 +1,5 @@
 <?php
-    if ($_SESSION['idRol']==1) {
+    if (isset($_SESSION['idRol'])) {
 ?>
 <?php
     include $GLOBALS['path']->HEADER;

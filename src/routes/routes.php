@@ -13,18 +13,18 @@ $GLOBALS['path'] = $path;
 
 
 
-
-
 require_once $path->CONTROLLERS.'/RegistroAdminController.php';
 require_once $path->CONTROLLERS.'/LoginController.php';
 require_once $path->CONTROLLERS.'/RegistroUsersController.php';
 require_once $path->CONTROLLERS.'/AlterUsersController.php';
 require_once $path->CONTROLLERS.'/DelUsersController.php';
+require_once $path->CONTROLLERS.'/EditUsersController.php';
 $RegistroAdminController = new RegistroAdminController();
 $LoginController = new LoginController();
 $RegistroUsersController = new RegistroUsersController();
 $AlterUsersController = new AlterUsersController();
 $DelUsersController = new DelUsersController();
+$EditUserConfigController = new EditUsersController();
 
 $rutas = [
     "/" => $path->LOGIN,
@@ -36,12 +36,14 @@ $rutas = [
     "/closed_session" => $path->CLOSEDSESSION,
     "/addUsers" => $path->ADDUSERS,
     "/config" => $path->CONFIG,
+    "/questions" => $path->QUESTIONS,
     'POST' => [
         "/registroAdminController" => [$RegistroAdminController, 'index'],
         "/loginController" => [$LoginController, 'index'],
         "/regstroUserController" => [$RegistroUsersController,'index'],
         "/alterUserController" => [$AlterUsersController,'index'],
         "/delUsersController" => [$DelUsersController,'index'],
+        "/editUsersConfigController" => [$EditUserConfigController,'index'],
     ],
 ];
 

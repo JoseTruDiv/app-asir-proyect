@@ -127,6 +127,8 @@ class UsuariosModels{
                 $_SESSION['emailUser'] = $usuario['email'];
 
                 $_SESSION['idRol'] = $usuario['idRol'];
+
+                $_SESSION['idUser'] = $usuario['id'];
                 
                 return 1;
             }else{
@@ -150,6 +152,58 @@ class UsuariosModels{
         } catch (\Throwable $th) {
             return 0;
         }
+    }
+
+
+
+    function editUserConfig2($email,$newValueArray,$valueSet){
+
+        $bbdd = db();
+
+        $queryID = $bbdd->query("SELECT id FROM usuarios WHERE email=\"$email\"");
+
+        $id = $queryID->fetch_array(MYSQLI_NUM)[0];
+
+        $query = "UPDATE usuarios SET $valueSet = ? WHERE id=?";
+       
+
+        $stmp = $bbdd->prepare($query);
+
+        $stmp->bind_param('si',$newValueArray,$id);
+
+        $stmp->execute();
+
+        $stmp->close();
+    }
+
+
+
+    function editUserConfig($arrayUser){
+
+        try {
+            $userModal = new UsuariosModels();
+
+            if (isset($arrayUser['newName'])) {
+                $userModal->editUserConfig2($arrayUser['email'],$arrayUser['newName'],'nombre');
+                $_SESSION['nameUser'] = $arrayUser['newName'];
+            }
+
+            if (isset($arrayUser['newPassword'])) {
+                $userModal->editUserConfig2($arrayUser['email'],$arrayUser['newPassword'],'password');
+            }
+
+            if (isset($arrayUser['newEmail'])) {
+                $userModal->editUserConfig2($arrayUser['email'],$arrayUser['newEmail'],'email');
+                $_SESSION['emailUser'] = $arrayUser['newEmail'];
+            }
+
+            $_SESSION['editUser']=true;
+
+            return 1;
+        } catch (\Throwable $th) {
+            return $th;
+        }
+        
     }
 
 }

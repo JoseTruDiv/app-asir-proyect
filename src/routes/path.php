@@ -25,6 +25,7 @@ class Path{
     public $TABLEUSER;
     public $ADDUSERS;
     public $CONFIG;
+    public $QUESTIONS;
 
     public function __construct() {
       $this->SRC = realpath(__DIR__ . '/..');
@@ -51,6 +52,7 @@ class Path{
       $this->TABLEUSER = realpath(__DIR__.'/../../app/components/widgets/tables/TableUsers.php');
       $this->ADDUSERS = realpath(__DIR__ . '/../../app/components/pages/AddUsers.php');
       $this->CONFIG = realpath(__DIR__.'/../../app/components/pages/Config.php');
+      $this->QUESTIONS = realpath(__DIR__.'/../../app/components/pages/Questions.php');
   }
 
 }
