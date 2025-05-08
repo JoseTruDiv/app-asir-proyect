@@ -28,4 +28,7 @@ const HTML = {
     closedEditUser: document.getElementById('closed-popup'),
     closedDelUser: document.getElementById('del-closed-popup'),
     boxInputDelusers: document.getElementById('box-input-delusers'),
+    itemBoxAcordionsClass: document.getElementsByClassName('item-box-acordion'),
+    divSSH: document.getElementById('SSH'),
+    closedNavUserMobile: document.getElementById('closed-nav-user-mobile'),
 }

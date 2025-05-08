@@ -26,6 +26,7 @@ class Path{
     public $ADDUSERS;
     public $CONFIG;
     public $QUESTIONS;
+    public $HEADERMOBILE;
 
     public function __construct() {
       $this->SRC = realpath(__DIR__ . '/..');
@@ -53,6 +54,7 @@ class Path{
       $this->ADDUSERS = realpath(__DIR__ . '/../../app/components/pages/AddUsers.php');
       $this->CONFIG = realpath(__DIR__.'/../../app/components/pages/Config.php');
       $this->QUESTIONS = realpath(__DIR__.'/../../app/components/pages/Questions.php');
+      $this->HEADERMOBILE = realpath(__DIR__.'/../../app/components/pages/HeaderMobile.php');
   }
 
 }

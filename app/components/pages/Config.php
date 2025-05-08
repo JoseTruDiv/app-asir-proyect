@@ -10,6 +10,8 @@
     <?php include $GLOBALS['path']->WIDGETS.'/navigations/Tab_Config.php';   ?>
 </div>
 
+<?php include $GLOBALS['path']->HEADERMOBILE;   ?>
+
 
 <?php
     }else{

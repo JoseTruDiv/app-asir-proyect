@@ -26,8 +26,8 @@
 
         function __construct()
         {   
-            $this->Administrador=[new Admin(),new CRM(),new Sitio_web(),new Notas(),new Cloud(),new Correo(),new Calendario(),new WorkSpace()];
-            $this->Usuario=[new CRM(),new Notas(),new Cloud(),new Correo(),new Calendario(),new Analytics(),new Meets(),new Finance(),new WorkSpace()];
+            $this->Administrador=[new Admin(),new CRM(),new Sitio_web(),new Notas(),new Cloud(),new Correo(),new Calendario(),new Meets()];
+            $this->Usuario=[new CRM(),new Sitio_web(),new Notas(),new Cloud(),new Correo(),new Calendario(),new Analytics(),new Meets(),new Finance(),new WorkSpace()];
             $this->Desarrollador=[new Sitio_web(),new Ftp(),new Portainer(),new SSH(),new Meets()];
         }
     }

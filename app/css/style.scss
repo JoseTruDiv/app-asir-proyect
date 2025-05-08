@@ -227,7 +227,6 @@ body{
 }
 
 
-
 .main{
     background-image: url('../imgs/2542.png');
     background-size: cover;
@@ -355,7 +354,9 @@ li{
 }
 
 
-
+.div-nav-mobile{
+    display: none;
+}
 
 
 
@@ -608,13 +609,13 @@ h3{
     background-color: #fff;
     width: 400px;
     max-width: 100%;
-    height: 30vh;
+    padding: 0rem 2rem 3rem 0rem;
 }
 
 .clickboard-ssh>input{
     padding: 0.5rem;
     border-radius: 0px;
-    width: 80%;
+    width: 100%;
 }
 
 .clickboard-ssh>button{
@@ -626,6 +627,50 @@ h3{
 .div-grid-apps{
     width: 70%;
     padding-top: 4rem;
+}
+
+.slidebar-user-mobile{
+    height: 100vh;
+    display: none;
+    background-color: #fff;
+    padding: 1rem;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+    width: 100%;
+    transform: translateX(-600px);
+}
+
+.animation-slidebar-user-mobile-on{
+    animation: ease-out 1.6s animation-slidebar-user-mobile-on;
+    animation-fill-mode: forwards;
+}
+
+.animation-slidebar-user-mobile-off{
+    animation: ease-out 1.6s animation-slidebar-user-mobile-off;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes animation-slidebar-user-mobile-on {
+    0%{
+        transform: translateX(-600px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes animation-slidebar-user-mobile-off {
+    0%{
+        transform: translateX(0px);
+    }
+
+    100%{
+        transform: translateX(-600px);
+    }
 }
 
 
@@ -927,6 +972,33 @@ h3{
 
 
 
+/***************************************QUESTIONS***************************************************/
+
+.box-acordion{
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.item-row-acordion{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.item-row-acordion:hover{
+    background-color: #f1f1f1;
+}
+
+.item-box-acordion{
+    border: 1px solid #f1f1f1;
+}
+
+.item-text-acordion{
+    padding: 2rem;
+}
+
+
 /***********************************************************************************************************/
 /***************************************RESPONSIVES***************************************************/
 /***********************************************************************************************************/
@@ -1189,6 +1261,67 @@ h3{
 
 @media screen and (max-width: $sm) {
 
+    .scroll-mobile{
+        overflow-y: scroll !important;
+        height: 70vh !important;
+    }
+    
+    @for $i from 1 through 10 {
+        .m-mobile-#{$i} {
+            margin: $i * 1rem !important;
+        }
+        .mt-mobile-#{$i} {
+            margin-top: $i * 1rem !important;
+        }
+        .mr-mobile-#{$i} {
+            margin-right: $i * 1rem !important;
+        }
+        .mb-mobile-#{$i} {
+            margin-bottom: $i * 1rem !important;
+        }
+        .ml-mobile-#{$i} {
+            margin-left: $i * 1rem !important;
+        }
+        .my-mobile-#{$i} {
+            margin-top: $i * 1rem !important;
+            margin-bottom: $i * 1rem !important;
+        }
+        .mx-mobile-#{$i} {
+            margin-right: $i * 1rem !important;
+            margin-left: $i * 1rem !important;
+        }
+        
+        .p-mobile-#{$i} {
+            padding: $i * 1rem !important;
+        }
+        .pt-mobile-#{$i} {
+            padding-top: $i * 1rem !important;
+        }
+        .pr-mobile-#{$i} {
+            padding-right: $i * 1rem !important;
+        }
+        .pb-mobile-#{$i} {
+            padding-bottom: $i * 1rem !important;
+        }
+        .pl-mobile-#{$i} {
+            padding-left: $i * 1rem !important;
+        }
+
+        .py-mobile-#{$i} {
+            padding-top: $i * 1rem !important;
+            padding-bottom: $i * 1rem !important;
+        }
+        .px-mobile-#{$i} {
+            padding-right: $i * 1rem !important;
+            padding-left: $i * 1rem !important;
+        }
+
+        .g-mobile-#{$i}{
+            gap: $i * 1rem !important;
+        }
+    }
+
+
 
     body{
         height: 100vh;
@@ -1295,11 +1428,16 @@ h3{
 
     .div-nav-mobile{
         position: absolute;
+        display: block !important;
         bottom: 0px;
         width: 100%;
         background-color: #fff;
         height: 10vh;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .slidebar-user-mobile{
+        display: block;
     }
 
 }

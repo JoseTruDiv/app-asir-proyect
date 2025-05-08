@@ -70,11 +70,36 @@ window.addEventListener('load',()=>{
         }
        
 
-       if (HTML.sshClipServer !== null) {
-            HTML.sshClipServer.addEventListener('click',()=>{
-                console.log(this.innerWidth);
+
+       if (HTML.divSSH !== null) {
+            HTML.divSSH.addEventListener('click',()=>{
+                for (const item of document.getElementsByClassName('div-alert-ssh')) {
+                    item.classList.remove('d-none');
+                }
+                
+            })
+
+            document.getElementById('closed-ssh').addEventListener('click',()=>{
+                for (const item of document.getElementsByClassName('div-alert-ssh')) {
+                    item.classList.add('d-none');
+                }
             })
        }
+
+
+       if (HTML.closedNavUserMobile !== null) {
+        HTML.closedNavUserMobile.addEventListener('click',()=>{
+            document.getElementsByClassName('slidebar-user-mobile')[0].classList.remove('animation-slidebar-user-mobile-on');
+            document.getElementsByClassName('slidebar-user-mobile')[0].classList.add('animation-slidebar-user-mobile-off');
+        })
+
+        document.getElementById('nav-user-mobile').addEventListener('click',()=>{
+            document.getElementsByClassName('slidebar-user-mobile')[0].classList.add('animation-slidebar-user-mobile-on');
+            document.getElementsByClassName('slidebar-user-mobile')[0].classList.remove('animation-slidebar-user-mobile-off');
+        })
+    }
+    
+
      
      /****************************************************************************************************HOME*******************/
 
@@ -278,6 +303,32 @@ window.addEventListener('load',()=>{
 
 
         /****************************************************************************************************CONFIG PAGE*******************/
+
+
+        
+        /****************************************************************************************************QUESTIONS PAGE*******************/
+
+
+                
+        if (HTML.itemBoxAcordionsClass[0] !== null) {
+            for (const item of HTML.itemBoxAcordionsClass) {
+                item.addEventListener('click',()=>{
+                    const id = item.id.split('-')[1];
+                    if (document.getElementsByClassName('item-text-acordion')[id].classList.contains('d-none')) {
+                        document.getElementsByClassName('item-text-acordion')[id].classList.remove('d-none');
+                        document.getElementsByClassName('icon-arrow')[id].innerHTML='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/></svg>';
+
+                    }else{
+                        document.getElementsByClassName('item-text-acordion')[id].classList.add('d-none');
+                        document.getElementsByClassName('icon-arrow')[id].innerHTML='<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"/></svg>';
+                    }
+                    
+                })
+            }
+        }
+
+
+        /****************************************************************************************************QUESTIONS PAGE*******************/
 
 
 
