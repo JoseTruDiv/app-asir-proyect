@@ -2141,6 +2141,66 @@ h3 {
     overflow-y: scroll !important;
     height: 70vh !important;
   }
+  .w-mobile-10 {
+    width: 10% !important;
+  }
+  .w-mobile-20 {
+    width: 20% !important;
+  }
+  .w-mobile-30 {
+    width: 30% !important;
+  }
+  .w-mobile-40 {
+    width: 40% !important;
+  }
+  .w-mobile-50 {
+    width: 50% !important;
+  }
+  .w-mobile-60 {
+    width: 60% !important;
+  }
+  .w-mobile-70 {
+    width: 70% !important;
+  }
+  .w-mobile-80 {
+    width: 80% !important;
+  }
+  .w-mobile-90 {
+    width: 90% !important;
+  }
+  .w-mobile-100 {
+    width: 100% !important;
+  }
+  .h-mobile-10 {
+    height: 10vh !important;
+  }
+  .h-mobile-20 {
+    height: 20vh !important;
+  }
+  .h-mobile-30 {
+    height: 30vh !important;
+  }
+  .h-mobile-40 {
+    height: 40vh !important;
+  }
+  .h-mobile-50 {
+    height: 50vh !important;
+  }
+  .h-mobile-60 {
+    height: 60vh !important;
+  }
+  .h-mobile-70 {
+    height: 70vh !important;
+  }
+  .h-mobile-80 {
+    height: 80vh !important;
+  }
+  .h-mobile-90 {
+    height: 90vh !important;
+  }
+  .h-mobile-100 {
+    height: 100vh !important;
+  }
   .m-mobile-1 {
     margin: 1rem !important;
   }
@@ -2717,6 +2777,33 @@ h3 {
   }
   .slidebar-user-mobile {
     display: block;
+  }
+  .box-config {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #box-1 {
+    width: 90% !important;
+  }
+  #box-2 {
+    width: 90% !important;
+  }
+  #box-3 {
+    width: 90% !important;
+  }
+  #formEditUser {
+    width: 100% !important;
+  }
+  .box-addUser-btn-mobile {
+    display: flex;
+    justify-content: center;
+  }
+  .tr-mobile-1 > td {
+    background-color: #999 !important;
+  }
+  .tr-mobile-2 > td {
+    background-color: #fff !important;
   }
 }
 /***************************************MOBILES***************************************************/

@@ -5,7 +5,7 @@
     include $GLOBALS['path']->HEADER;
 ?>
 
-<div class="container px-3 pt-3 g-1" style="height: 77vh;flex-direction: column;">
+<div class="container px-3 pt-3 g-1 p-mobile-1" style="height: 77vh;flex-direction: column;">
     <?php include $GLOBALS['path']->WIDGETS.'/breadcrumbs/BreadHome.php';   ?>
     <div class="d-flex">
         <h3>Panel de administración de usuarios</h3>
@@ -33,6 +33,9 @@
         </div>
     </div>
     <div class="d-flex">
+        <?php 
+            include $GLOBALS['path']->WIDGETS.'/tables/TableUsersMobile.php';
+        ?>
         <?php 
             include $GLOBALS['path']->TABLEUSER;
         ?>

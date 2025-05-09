@@ -5,7 +5,7 @@
     include $GLOBALS['path']->HEADER;
 ?>
 
-<div class="conatiner px-5 py-1">
+<div class="conatiner px-5 py-1 px-mobile-1">
     <?php include $GLOBALS['path']->WIDGETS.'/breadcrumbs/BreadHome.php';   ?>
     <?php include $GLOBALS['path']->WIDGETS.'/navigations/Tab_Config.php';   ?>
 </div>

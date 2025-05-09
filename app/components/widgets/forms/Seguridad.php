@@ -1,5 +1,5 @@
 <p class="text pb-1">Cambiar datos de usuario:</p>
-            <form class="row-column g-2 w-60" action="/editUsersConfigController" method="post">
+            <form id="formEditUser" class="row-column g-2 w-60" action="/editUsersConfigController" method="post">
                 <input type="hidden" name="emailUser" id="emailUser" value="<?php echo $_SESSION['emailUser']; ?>">
                 <div>
                     <div>

@@ -1265,6 +1265,20 @@ h3{
         overflow-y: scroll !important;
         height: 70vh !important;
     }
+
+
+    @for $i from 1 through 10 {
+        .w-mobile-#{$i * 10} {
+            width: $i * 10% !important; // Establece el ancho de cada columna en porcentaje
+        }
+    }
+    
+    
+    @for $i from 1 through 10 {
+        .h-mobile-#{$i * 10} {
+            height: $i * 10vh !important; // Establece el ancho de cada columna en porcentaje
+        }
+    }
     
     @for $i from 1 through 10 {
         .m-mobile-#{$i} {
@@ -1440,6 +1454,42 @@ h3{
         display: block;
     }
 
+
+    .box-config{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    #box-1{
+        width: 90% !important;
+    }
+
+    #box-2{
+        width: 90% !important;
+    }
+
+    #box-3{
+        width: 90% !important;
+    }
+
+    #formEditUser{
+        width: 100% !important;
+    }
+
+    .box-addUser-btn-mobile{
+        display: flex;
+        justify-content: center;
+    }
+
+    .tr-mobile-1>td{
+        background-color: #999 !important;
+    }
+
+    .tr-mobile-2>td{
+        background-color: #fff !important;
+    }
 }
 
 

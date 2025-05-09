@@ -1,5 +1,5 @@
 
-<div class="d-flex w-100">
+<div class="d-flex w-100 d-none-mobile">
     <table class="table-user w-100">
         <tr class="tr-first">
             <td class="td-check">Check</td>
