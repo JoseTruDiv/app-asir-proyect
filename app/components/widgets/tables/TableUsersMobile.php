@@ -11,6 +11,7 @@ $getUserController = new GetUsersController();
 
 $arrayUsers = $getUserController->getUsers();
 
+
 if ($arrayUsers == 0) {
 
 ?>
@@ -84,6 +85,7 @@ if ($arrayUsers == 0) {
                     echo " d-none";
                 } ?>">
             <tr class="tr-mobile-<?php echo $pares; ?>">
+                    <input type="hidden" name="" id="getUsuariosMobile" value="<?php echo count($arrayUsers);  ?>">
                     <td class="td-check">idUser</td>
                     <td class="d-flex g-1 justify-center"><?php echo $array[0];  ?> <input class="check-box" type="checkbox" name="<?php echo 'idUser-'.$array[0];  ?>" id="<?php echo 'idUser-'.$array[0];  ?>"></td>
                 </tr>

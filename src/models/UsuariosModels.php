@@ -7,12 +7,12 @@ class UsuariosModels{
     function addUser($arrayUser){
 
         try {
-                $query = "INSERT INTO usuarios (nombre,apellido,email,departamento,password,idRol) VALUES (?,?,?,?,?,?)";
+                $query = "INSERT INTO usuarios (nombre,apellido,email,departamento,password,idRol,lang) VALUES (?,?,?,?,?,?,?)";
             $bbdd = db();
 
             $stmp = $bbdd->prepare($query);
 
-            $stmp->bind_param('sssssi',$arrayUser['nombre'],$arrayUser['apellido'],$arrayUser['email'],$arrayUser['departamento'],$arrayUser['password'],$arrayUser['idRol']);
+            $stmp->bind_param('sssssis',$arrayUser['nombre'],$arrayUser['apellido'],$arrayUser['email'],$arrayUser['departamento'],$arrayUser['password'],$arrayUser['idRol'],'es');
 
             $stmp->execute();
 

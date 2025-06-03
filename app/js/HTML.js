@@ -20,6 +20,8 @@ const HTML = {
     errorPass: document.getElementById('errorPasswd'),
     afterUsers: document.getElementById('afterUsers'),
     beforeUsers: document.getElementById('beforeUsers'),
+    afterUsersMobile: document.getElementById('afterUsersMobile'),
+    beforeUsersMobile: document.getElementById('beforeUsersMobile'),
     checkBoxClass: document.getElementsByClassName('check-box'),
     boxEditUser: document.getElementById('box-pupups-editUser'),
     boxDelUser: document.getElementById('box-pupups-delUser'),
@@ -31,4 +33,5 @@ const HTML = {
     itemBoxAcordionsClass: document.getElementsByClassName('item-box-acordion'),
     divSSH: document.getElementById('SSH'),
     closedNavUserMobile: document.getElementById('closed-nav-user-mobile'),
+    
 }

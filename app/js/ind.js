@@ -8,6 +8,7 @@ window.addEventListener('load',()=>{
     var idUsersChecked=[];
     var idUserCheck;
     var nameEditUser;
+    var countMobile = 0; 
 
 
 
@@ -72,19 +73,21 @@ window.addEventListener('load',()=>{
 
 
        if (HTML.divSSH !== null) {
-            HTML.divSSH.addEventListener('click',()=>{
+            HTML.divSSH.addEventListener('click', () => {
                 for (const item of document.getElementsByClassName('div-alert-ssh')) {
                     item.classList.remove('d-none');
+                    item.classList.add('d-flex');
                 }
-                
-            })
-
-            document.getElementById('closed-ssh').addEventListener('click',()=>{
-                for (const item of document.getElementsByClassName('div-alert-ssh')) {
-                    item.classList.add('d-none');
-                }
-            })
+                console.log('hola')
+            });
+            document.getElementById('closed-ssh').addEventListener('click', () => {
+                    for (const item of document.getElementsByClassName('div-alert-ssh')) {
+                        item.classList.add('d-none');
+                        item.classList.remove('d-flex');
+                    }
+                });
        }
+       
 
 
        if (HTML.closedNavUserMobile !== null) {
@@ -123,6 +126,60 @@ window.addEventListener('load',()=>{
             }
  
 
+           if (HTML.beforeUsersMobile !== null) {
+
+
+    HTML.beforeUsersMobile.addEventListener('click', () => {
+        if (countMobile < 0) { 
+            countMobile = 1; 
+        }
+        if (document.getElementsByClassName('div-' + countMobile)[0] !== null) {
+            
+            if (countMobile > 0) {
+                 for (const item of document.getElementsByClassName('div-' + countMobile)) {
+                item.classList.add('d-none');
+            }
+            }else{
+                HTML.beforeUsersMobile.classList.add('d-none');
+            }
+
+             countMobile--;
+
+            var countMine = countMobile; 
+
+            for (const item of document.getElementsByClassName('div-' + countMine)) {
+                item.classList.remove('d-none');
+            }
+        }
+    });
+}
+
+
+             if (HTML.afterUsersMobile !== null) {
+                 var usuariosMobile = parseInt(document.getElementById('getUsuariosMobile').value);
+
+                var totalUsuariosMobile = Math.floor(usuariosMobile/2);
+                HTML.afterUsersMobile.addEventListener('click',()=>{
+                    countMobile++;
+
+                    if (countMobile > totalUsuariosMobile) {
+                        countMobile = totalUsuariosMobile;
+                    }
+
+                    if (document.getElementsByClassName('div-'+countMobile)[0] !== null) {
+                        HTML.beforeUsersMobile.classList.remove('d-none');
+                        for (const item of document.getElementsByClassName('div-'+countMobile)) {
+                            item.classList.remove('d-none');
+                        }
+                        var countMine = countMobile - 1;
+                        for (const item of document.getElementsByClassName('div-'+countMine)) {
+                            item.classList.add('d-none');
+                        }            
+                    }
+                })
+            }
+ 
+
             if (HTML.beforeUsers !== null) {
                 var count = 1;
                 HTML.beforeUsers.addEventListener('click',()=>{
@@ -137,6 +194,8 @@ window.addEventListener('load',()=>{
                     }
                 })
             }
+
+
 
             if ( HTML.checkBoxClass[0]!==null) {
                 var checkedNumber = 0;
