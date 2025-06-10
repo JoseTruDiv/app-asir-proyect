@@ -8,7 +8,7 @@
         function __construct() {
             $this->name='ANALYTICS';
             $this->img='/app/imgs/apps/app_analytics.svg';
-            $this->url='#';
+            $this->url='https://developers.google.com/analytics?hl=es-419';
         }
 
     }

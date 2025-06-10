@@ -8,7 +8,7 @@
         function __construct() {
             $this->name='CRM';
             $this->img='/app/imgs/apps/app_crm.svg';
-            $this->url='#';
+            $this->url='http://financelimitserver.duckdns.org:8086';
         }
 
     }

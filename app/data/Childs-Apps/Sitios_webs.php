@@ -8,7 +8,7 @@
         function __construct() {
             $this->name='SITIO WEB';
             $this->img='/app/imgs/apps/app_web.svg';
-            $this->url='http://192.168.195.6';
+            $this->url='https://financelimit.srvjs.org/';
         }
 
     }
