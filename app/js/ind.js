@@ -11,7 +11,6 @@ window.addEventListener('load',()=>{
     var countMobile = 0; 
 
 
-
     /****************************************************************************************************FORMULARIO DE REGISTRO*******************/
         if (HTML.formReg !== null) {
             HTML.formReg.addEventListener('submit',(e)=>{
@@ -24,7 +23,6 @@ window.addEventListener('load',()=>{
             })
         }
 
-        
 
 
     /****************************************************************************************************FORMULARIO DE REGISTRO*******************/
