@@ -11,7 +11,7 @@ SalesMaster es un panel de control de acceso que permite crear, modificar o elim
 
 ## Requisitos
 
-- PHP 8.x o superior
+- PHP 8.4.4
 - Git
 
 ## Instalación
